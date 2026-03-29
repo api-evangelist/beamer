@@ -1,0 +1,41 @@
+aid: beamer
+name: Beamer
+description: >-
+  Beamer is a changelog and notification tool for announcing product updates,
+  new features, and API changes.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Deprecation
+  - Changelog
+  - Notifications
+  - Product Updates
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/beamer/refs/heads/main/apis.yml
+created: '2026-03-29'
+modified: '2026-03-29'
+specificationVersion: '0.19'
+apis:
+  - aid: beamer:beamer
+    name: Beamer
+    description: >-
+      Beamer is a changelog and notification tool for announcing product
+      updates, new features, and API changes.
+    humanURL: https://www.getbeamer.com/
+    tags:
+      - Deprecation
+      - Changelog
+      - Notifications
+    properties:
+      - type: Documentation
+        url: https://www.getbeamer.com/docs
+      - type: Website
+        url: https://www.getbeamer.com/
+common:
+  - type: Website
+    url: https://www.getbeamer.com/
+  - type: Documentation
+    url: https://www.getbeamer.com/docs
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
