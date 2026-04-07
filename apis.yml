@@ -6,8 +6,8 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Deprecation
   - Changelog
+  - Deprecation
   - Notifications
   - Product Updates
 url: >-
@@ -23,8 +23,8 @@ apis:
       updates, new features, and API changes.
     humanURL: https://www.getbeamer.com/
     tags:
-      - Deprecation
       - Changelog
+      - Deprecation
       - Notifications
     properties:
       - type: Documentation
