@@ -89,6 +89,14 @@ common:
         description: Email marketing integration for delivering Beamer changelog digests through ActiveCampaign.
       - name: WordPress
         description: WordPress plugin for embedding Beamer changelog feed in WordPress websites.
+integrations:
+  - name: logos
+  - name: feature image
+  - name: arrow image
+  - name: icons
+  - name: blog image
+  - name: social
+  - name: footer
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
