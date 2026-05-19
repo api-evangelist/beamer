@@ -42,6 +42,8 @@ apis:
         url: https://www.getbeamer.com/api
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/getbeamer
   - type: Website
     url: https://www.getbeamer.com/
   - type: Documentation
