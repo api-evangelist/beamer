@@ -42,6 +42,12 @@ apis:
         url: https://www.getbeamer.com/api
 
 common:
+  - type: TrustCenter
+    url: security/beamer-trust-center.yml
+  - type: DomainSecurity
+    url: security/beamer-domain-security.yml
+  - url: https://www.getbeamer.com/blog
+    type: Blog
   - type: LinkedIn
     url: https://www.linkedin.com/company/getbeamer
   - type: Website
