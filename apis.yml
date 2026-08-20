@@ -24,6 +24,12 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/beamer.png
 tags:
   - Changelog
   - Deprecation
+  - Notification
+  - Product Updates
+  - User Engagement
+tags_raw:
+  - Changelog
+  - Deprecation
   - Notifications
   - Product Updates
   - User Engagement
@@ -42,6 +48,10 @@ apis:
       segment management. Authentication uses an API key from Beamer settings.
     humanURL: https://www.getbeamer.com/api
     tags:
+      - Changelog
+      - Notification
+      - Product Updates
+    tags_raw:
       - Changelog
       - Notifications
       - Product Updates
