@@ -8,6 +8,17 @@ description: >-
   Beamer is now part of the Userflow product suite. The API uses API key authentication
   and supports OpenAPI specifications and Postman collections.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
