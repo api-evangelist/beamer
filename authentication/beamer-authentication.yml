@@ -1,0 +1,42 @@
+generated: '2026-09-14'
+method: searched
+source: https://getbeamer-api.pages.dev/
+docs: https://getbeamer-api.pages.dev/
+description: >-
+  Beamer's REST API authenticates with a single account-scoped API key sent in a custom header. There
+  is no OAuth, no OpenID Connect, no mTLS and no scope surface — a key carries every permission the
+  account has, including destructive team and privacy operations.
+api_base: https://api.getbeamer.com/v0
+schemes:
+  - id: Beamer-Api-Key
+    type: apiKey
+    in: header
+    name: Beamer-Api-Key
+    description: >-
+      Account API key, retrieved from the Beamer dashboard under Settings > API
+      (https://app.getbeamer.com/settings#api). Required on every request; the reference documents a
+      401 "Either no API key was provided or the provided API key is invalid" on all 49 operations.
+    scopes: []
+    rotation: not documented
+  - id: Beamer-Webhook-Secret
+    type: apiKey
+    in: header
+    name: Beamer-Webhook-Secret
+    direction: inbound
+    description: >-
+      Shared secret Beamer sends on every outbound webhook POST so the receiver can validate
+      authenticity. Auto-generated per webhook and readable in the dashboard. It is a static shared
+      secret, not a signature (no HMAC over the body, no timestamp, no replay window).
+    source: https://help.userflow.com/beamer/docs/developer-documentation
+observed:
+  - url: https://api.getbeamer.com/v0/url
+    method: GET
+    sent_credentials: none
+    http_status: 401
+    content_type: application/json;charset=utf-8
+    body: '"The API key is invalid."'
+    note: probed 2026-09-14 — unauthenticated requests are rejected, confirming the scheme is enforced.
+oauth: false
+openid_connect: false
+mtls: false
+scopes_documented: false

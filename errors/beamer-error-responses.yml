@@ -1,0 +1,65 @@
+generated: '2026-09-14'
+method: searched
+source: https://getbeamer-api.pages.dev/
+description: >-
+  Error surface for the Beamer REST API, read from the published API reference (every operation
+  documents the same status set) and confirmed against a live unauthenticated probe. Beamer does NOT
+  use RFC 9457 problem+json: the error body observed on the wire is a bare JSON string, and the
+  reference declares no error schema at all.
+format: none
+problem_json: false
+envelope:
+  content_type: application/json
+  shape: bare JSON string
+  example: '"The API key is invalid."'
+  observed_at: https://api.getbeamer.com/v0/url
+  observed: '2026-09-14'
+  note: >-
+    No code field, no type URI, no machine-readable reason. A client cannot branch on anything but the
+    HTTP status.
+statuses:
+  - status: 400
+    title: Bad Request
+    meaning: Some parameter is missing or doesn't follow the API specification.
+    remediation: Check required parameters and formats (dates ISO-8601, languages ISO-639 two-letter).
+    retryable: false
+    documented_on_operations: 47
+  - status: 401
+    title: Unauthorized
+    meaning: Either no API key was provided or the provided API key is invalid.
+    remediation: Send a valid key in the Beamer-Api-Key header; keys are issued at app.getbeamer.com/settings#api.
+    retryable: false
+  - status: 403
+    title: Forbidden
+    meaning: Not allowed to access this resource.
+    remediation: >-
+      Frequently a plan gate rather than a permissions error — many parameters and endpoints are marked
+      "Only available on the Starter/Pro/Scale plan" in the reference.
+    retryable: false
+  - status: 404
+    title: Not Found
+    meaning: >-
+      Documented on 16 by-ID operations, e.g. "Post not found." for GET /posts/{postId}.
+    retryable: false
+    documented_on_operations: 16
+  - status: 405
+    title: Method Not Allowed
+    meaning: This method is not allowed on this resource.
+    retryable: false
+  - status: 429
+    title: Too Many Requests
+    meaning: >-
+      You have reached your account's monthly requests limit. Also the documented response for the
+      30 requests/second ceiling on paid accounts.
+    remediation: >-
+      Back off; monthly quota is per plan (see rate-limits/beamer-rate-limits.yml). No Retry-After or
+      RateLimit-* header is documented, and none was observed.
+    retryable: true
+  - status: 500
+    title: Internal Server Error
+    meaning: Something went wrong on our side.
+    retryable: true
+gaps:
+  - No error code registry is published — only the six HTTP statuses above.
+  - No RFC 9457 application/problem+json.
+  - No rate-limit response headers documented, so a client cannot see how close it is to the ceiling.

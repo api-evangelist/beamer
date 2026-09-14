@@ -1,0 +1,146 @@
+generated: '2026-09-14'
+method: probed
+source: live HTTPS probes of every host in apis.yml, the API base host, the docs host and the API reference host
+description: >-
+  Well-known discovery probe for Beamer. Every named path was requested on every host the record
+  knows. Nothing was served: the marketing site (Webflow) answers 404 with an "Invalid .well-known
+  request" HTML page, the API host answers a bare 404, and the API reference host
+  (getbeamer-api.pages.dev, a Cloudflare Pages single-page deploy) is a catch-all that answers 200
+  with the same 976KB HTML documentation shell for every path — an SPA shell, not a document.
+  No WellKnown or SecurityTxt pointer is emitted, because no path returned a real document.
+hosts:
+  - host: www.getbeamer.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: getbeamer.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: api.getbeamer.com
+    note: API base host (https://api.getbeamer.com/v0)
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: app.getbeamer.com
+    note: application/console host; three paths 302 to the marketing site home page, which is not a document
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 302
+        note: redirects to https://www.getbeamer.com/ (HTML home page, not a discovery document)
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+        note: redirects to https://www.getbeamer.com/ (HTML home page, not a discovery document)
+      - path: /.well-known/api-catalog
+        status: 302
+        note: redirects to https://www.getbeamer.com/ (HTML home page, not a discovery document)
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: help.userflow.com
+    note: docs host — Beamer's knowledge base lives at help.userflow.com/beamer after the Beamer/Userflow merger
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: getbeamer-api.pages.dev
+    note: >-
+      API reference host, iframed by https://www.getbeamer.com/api. Cloudflare Pages catch-all — every
+      path returns HTTP 200 with the identical 976,591-byte documentation HTML. Recorded as a miss:
+      a 200 that returns an SPA/docs shell is not a document.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        note: HTML documentation shell, not a security.txt — treated as a miss
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: HTML documentation shell — treated as a miss
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        note: HTML documentation shell — treated as a miss
+      - path: /.well-known/api-catalog
+        status: 200
+        note: HTML documentation shell — treated as a miss
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        note: HTML documentation shell — treated as a miss
+      - path: /.well-known/agent-card.json
+        status: 200
+        note: HTML documentation shell — treated as a miss
+      - path: /.well-known/agent.json
+        status: 200
+        note: HTML documentation shell — treated as a miss
+  - host: status.getbeamer.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: trust.getbeamer.com
+    note: 301s to trust.userflow.com (Vanta-hosted trust center)
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+      - path: /.well-known/agent-card.json
+        status: 301
+      - path: /.well-known/agent.json
+        status: 301
+summary:
+  documents_served: 0
+  hosts_probed: 8
+  agent_card_found: false
+  security_txt_found: false

@@ -1,0 +1,153 @@
+generated: '2026-09-14'
+method: searched
+source: https://getbeamer-api.pages.dev/
+docs: https://getbeamer-api.pages.dev/
+description: >-
+  Cross-cutting runtime semantics of the Beamer REST API, read from the published API reference
+  (49 documented operations across Feed, Ping, Posts, Feature requests, Users, NPS, Team and Privacy)
+  and from a live unauthenticated probe of https://api.getbeamer.com/v0/url.
+api_base: https://api.getbeamer.com/v0
+api_version: 0.1.0
+authentication:
+  style: api-key-header
+  header: Beamer-Api-Key
+  detail: see authentication/beamer-authentication.yml
+idempotency:
+  supported: false
+  coverage: none
+  mechanism: none
+  header: null
+  detail: >-
+    The reference documents no Idempotency-Key header, no client-supplied request identifier and no
+    replay window on any of the mutating operations (POST /posts, POST /posts/{postId}/comments,
+    POST /posts/{postId}/reactions, POST /requests, POST /requests/{id}/comments,
+    POST /requests/{id}/votes, POST /users, POST /nps/email, POST /team, plus the PUT and DELETE
+    surface). A retried POST creates a second post, comment, reaction or vote.
+  scope: []
+  evidence: 'Full-text search of the API reference for "idempoten" returns 0 matches.'
+pagination:
+  style: page-number
+  params:
+    - name: page
+      description: Combined with maxResults, paginates the retrieval of the collection.
+    - name: maxResults
+      description: Retrieve at most this many items.
+  page_size_max: 10
+  detail: >-
+    Collection reads (posts, comments, reactions, unread, feature requests and their comments/votes)
+    take page + maxResults. The reference states the maximum number of items returned is 10, which
+    makes a full export of a large account an expensive walk against a monthly request quota.
+  response_envelope: bare JSON array — no total count, no next-page cursor or link
+  count_endpoints:
+    - GET /posts/count
+    - GET /posts/{postId}/comments/count
+    - GET /posts/{postId}/reactions/count
+    - GET /unread/count
+    - GET /requests/count
+    - GET /requests/{featureRequestId}/comments/count
+    - GET /requests/{featureRequestId}/votes/count
+    - GET /nps/count
+  count_note: >-
+    Beamer's answer to the missing total is a parallel /count endpoint per collection — a separate
+    request (and a separate quota unit) to learn how many items a paginated read will yield.
+sorting:
+  supported: true
+  param: sort
+  detail: >-
+    GET /users accepts sort=<attribute> (including custom attributes); a leading hyphen reverses the
+    order, e.g. sort=-lastSeen.
+filtering:
+  detail: >-
+    Segmentation filters (filter, forceFilter, filterUrl, filterByUrl), date ranges (dateFrom/dateTo,
+    ISO-8601), language (ISO-639 two-letter), category, and boolean state filters
+    (published, archived, expired). Several are plan-gated: filter/forceFilter/filterUrl are Pro and up,
+    expired is Starter and up, filterByUserId is Scale only.
+field_expansion:
+  supported: false
+metadata:
+  supported: true
+  detail: >-
+    Users carry arbitrary custom attributes (userCustomAttributes), which also appear in webhook
+    payloads and can be used as segmentation and sort keys.
+request_tracing:
+  request_id_header: null
+  detail: >-
+    No request-id or correlation header is documented, and none was returned on the probed 401. The
+    reference does document ignoreRequestDetails, which suppresses the IP/browser/geolocation capture
+    that would otherwise be attributed to the end user when calling from a backend.
+versioning:
+  style: uri-path
+  current: v0
+  spec_version: 0.1.0
+  detail: >-
+    The version lives in the path (https://api.getbeamer.com/v0). The API is described by Beamer's own
+    docs as a beta ("We just launched a beta version of our API"), and the reference still reports
+    version 0.1.0 — see lifecycle/beamer-lifecycle.yml.
+error_envelope:
+  format: bare JSON string
+  problem_json: false
+  detail: see errors/beamer-error-responses.yml
+rate_limit_signaling:
+  headers: none
+  detail: >-
+    Limits are published in prose (30 requests/second on paid accounts; a monthly request quota per
+    plan) but no X-RateLimit-*, RateLimit-* or Retry-After header is documented, and none was present
+    on the probed response. Exhaustion is a 429. See rate-limits/beamer-rate-limits.yml.
+reversibility:
+  grade: documented
+  detail: >-
+    Beamer publishes reversal operations for the content surface but states no window for any of them,
+    so this grades `documented`, not `verified`. No undo, restore, trash or soft-delete endpoint is
+    documented anywhere in the reference: DELETE is terminal.
+  surfaces:
+    - write: POST /posts
+      reversal: DELETE /posts/{postId}
+      reversal_type: delete
+      window: not stated
+      note: >-
+        A post can also be un-published rather than destroyed — the Post schema carries a `published`
+        boolean, so PUT /posts/{postId} with published=false returns it to draft. That is the only
+        non-destructive walk-back the reference publishes.
+    - write: PUT /posts/{postId}
+      reversal: none
+      window: not stated
+      note: No revision history or rollback is documented; an update overwrites the previous content.
+    - write: POST /posts/{postId}/comments
+      reversal: DELETE /posts/{postId}/comments/{commentId}
+      window: not stated
+    - write: POST /posts/{postId}/reactions
+      reversal: DELETE /posts/{postId}/reactions/{reactionId}
+      window: not stated
+    - write: POST /requests
+      reversal: DELETE /requests/{featureRequestId}
+      window: not stated
+    - write: POST /requests/{featureRequestId}/comments
+      reversal: DELETE /requests/{featureRequestId}/comments/{commentId}
+      window: not stated
+    - write: POST /requests/{featureRequestId}/votes
+      reversal: DELETE /requests/{featureRequestId}/votes/{voteId}
+      window: not stated
+    - write: POST /users
+      reversal: DELETE /users
+      window: not stated
+      note: >-
+        DELETE /users deletes every user MATCHING the query parameters rather than one addressed
+        record — an agent that omits a filter deletes broadly, and nothing is documented to undo it.
+    - write: POST /team
+      reversal: DELETE /team
+      window: not stated
+      note: Team membership can be re-invited, so the effect is recoverable even though the call is not.
+    - write: DELETE /privacy
+      reversal: none
+      window: not stated
+      note: >-
+        GDPR erasure endpoint ("Deletes user data"). Irreversible by design and the most consequential
+        call in the surface; no confirmation, dry-run or grace period is published.
+dry_run_mode:
+  supported: false
+  detail: No test mode, sandbox key prefix, or dry-run parameter is documented.
+cross_links:
+  errors: errors/beamer-error-responses.yml
+  lifecycle: lifecycle/beamer-lifecycle.yml
+  authentication: authentication/beamer-authentication.yml
+  rate_limits: rate-limits/beamer-rate-limits.yml

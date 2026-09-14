@@ -1,0 +1,397 @@
+# Beamer - Userflow
+
+> Knowledge base documentation for Beamer - Userflow.
+
+## Userflow
+
+- [Welcome to the Userflow help center](https://help.userflow.com/docs/welcome.md)
+- [Getting Started](https://help.userflow.com/docs/getting-started.md)
+- [Installing the Userflow Chrome Extension](https://help.userflow.com/docs/userflow-chrome-extension.md)
+- [Getting started with Userflow](https://help.userflow.com/docs/getting-started-with-userflow.md): Enhance user experience with Userflow's tools: AI Assistant, checklists, flows, and more for seamless onboarding and support within your app.
+- [User onboarding strategies](https://help.userflow.com/docs/onboarding-strategies.md): Create an engaging user onboarding experience with our step-by-step guide, featuring welcome modals, flows, and checklists to boost user success from day one.
+- [Customizing Themes](https://help.userflow.com/docs/themes.md): Customize your Userflow components with your app's look and feel, including light and dark modes, using our no-code editor. Adjust colors, fonts, and more to create a seamless user experience without coding.
+- [Setting up environments and versions](https://help.userflow.com/docs/environments-and-versions.md): Manage content versions and test in isolated environments with Userflow's powerful version control and easy publishing features. Optimize your flows risk-free!
+- [Configuring companies](https://help.userflow.com/docs/companies.md): Manage users efficiently with Companies in Userflow, enabling targeted content and tracking based on company attributes and user roles.
+- [Managing Teams in Userflow](https://help.userflow.com/docs/team-management.md): Collaborate effectively in Userflow by managing team roles, adding members, and transferring ownership for seamless onboarding content creation.
+- [Managing multiple products](https://help.userflow.com/docs/multiple-products.md): Manage multiple products effortlessly with Userflow—choose between a single account or separate accounts for better data segmentation and user access.
+- [Keyboard shortcuts and interactions](https://help.userflow.com/docs/flow-builder-ergonomics.md): Userflow's flow builder offers fast, ergonomic keyboard navigation, copy/paste, and undo/redo features for seamless workflow creation.
+- [Single sign-on (SAML SSO)](https://help.userflow.com/docs/single-sign-on-saml-sso.md): Integrate Userflow with your identity provider for secure SAML SSO sign-ins. Simplify access for your team with easy setup and management.
+- [How to set up your Adoption Agent in minutes](https://help.userflow.com/docs/ai-assistant-1.md): Userflow's AI Assistant delivers instant, automated answers in your app, reducing support tickets and enhancing user experience with accurate responses.
+- [Simplify multilingual content creation with AI Translate and Localization](https://help.userflow.com/docs/localization-1.md): Streamline global reach with Userflow's localization feature, enabling easy multi-language support and efficient content translation for diverse audiences.
+- [Creating AI-generated Smartflows](https://help.userflow.com/docs/creating-smartflows-1.md): Transform your onboarding with Smartflows—AI-driven flows that save time, enhance user engagement, and require no technical skills to create.
+- [Transform your messaging effortlessly with AI Rephrase](https://help.userflow.com/docs/ai-rephrase.md): Enhance your in-app text with Userflow's AI Rephrase feature—save time, stay on-brand, and tailor content effortlessly. Available for Pro users in Beta.
+- [Proactive Flow Monitoring with Signals](https://help.userflow.com/docs/flowai-insights-1.md)
+- [Guides](https://help.userflow.com/docs/guides.md)
+- [Scheduling Userflow experiences](https://help.userflow.com/docs/scheduling-userflow-experiences.md)
+- [Filtering list pages](https://help.userflow.com/docs/filtering-list-pages.md)
+- [Getting started with Userflow](https://help.userflow.com/docs/about-userflow-engagement-types-2.md): Enhance user experience with Userflow's tools: AI Assistant, checklists, flows, and more for seamless onboarding and support within your app.
+- [Embed a Banner or Checklist](https://help.userflow.com/docs/embed-a-banner-or-checklist.md): Embed unlimited banners and checklists in your app for seamless user engagement. Customize placements and styles to enhance user experience effectively.
+- [Announcements](https://help.userflow.com/docs/announcements-feedback.md)
+- [Announcements](https://help.userflow.com/docs/announcements.md): Update users with Announcements in Userflow! Highlight features, fixes, and events with badges and popouts for better visibility in your resource center.
+- [User Feedback: Reactions and Comments for Announcements](https://help.userflow.com/docs/reactions-comments-in-announcements.md)
+- [Launchers](https://help.userflow.com/docs/launchers.md): Enhance user engagement with Userflow's Launchers—create beacons, buttons, and tooltips to guide users seamlessly through your app.
+- [Adoption Agent](https://help.userflow.com/docs/adoption-agent-section.md)
+- [How to set up your Adoption Agent in minutes](https://help.userflow.com/docs/ai-assistant.md): Userflow's AI Assistant delivers instant, automated answers in your app, reducing support tickets and enhancing user experience with accurate responses.
+- [Adoption Agent Analytics & Insights](https://help.userflow.com/docs/ai-assistant-analytics-insights.md)
+- [Adoption Agent: Agent-level limits vs. Global limits](https://help.userflow.com/docs/usage-limits-vs-global-limits.md)
+- [Adoption Agent settings and advanced customizations](https://help.userflow.com/docs/ai-assistant-settings-and-advanced-customizations.md): Customize your AI Assistant with advanced settings, including language preferences, auto-training, and persistent knowledge for enhanced performance.
+- [Adoption Agent localization](https://help.userflow.com/docs/ai-assistant-localization.md)
+- [Adoption Agent usage limits and billing](https://help.userflow.com/docs/ai-assistant-pricing.md): Manage your AI Assistant costs with message limits, notifications, and flexible plans. Control usage and avoid overages effectively.
+- [Adoption Agent usage notifications](https://help.userflow.com/docs/managing-the-ai-assistant-usage-notifications.md): Stay in control of your AI Assistant usage with automatic email alerts that notify you at 80%, 90%, and 100% of your message quota. Avoid service interruptions!
+- [Action Flows: what they are and when to use one](https://help.userflow.com/docs/action-flows.md)
+- [Create an Action Flow](https://help.userflow.com/docs/create-an-action-flow.md)
+- [Add an Action Flow to your Adoption Agent](https://help.userflow.com/docs/add-action-flows-to-your-adoption-agent.md)
+- [Surveys/NPS](https://help.userflow.com/docs/surveysnps.md): Build in-app surveys with Userflow to measure customer satisfaction, gather feedback, and enhance user research seamlessly within your app.
+- [Single sign-on (SAML SSO)](https://help.userflow.com/docs/single-sign-on-saml-sso-3.md): Integrate Userflow with your identity provider for secure SAML SSO sign-ins. Simplify access for your team with easy setup and management.
+- [Liquid templates](https://help.userflow.com/docs/liquid-templates.md): Explore how Liquid templates in Userflow enable dynamic content generation based on user attributes, enhancing customization and user experience.
+- [Checklists](https://help.userflow.com/docs/checklists-section.md)
+- [Checklists](https://help.userflow.com/docs/checklists.md): Enhance user onboarding with checklists that guide, engage, and track progress, ensuring a seamless experience in your app's Resource Center.
+- [How to start flows or checklists](https://help.userflow.com/docs/how-to-start-flows-or-checklists.md): Userflow offers versatile task management with auto-start conditions, manual triggers, and integrations to enhance productivity and streamline operations.
+- [Redirect users to a specific page before starting a flow from a checklist](https://help.userflow.com/docs/redirect-users-to-a-specific-page-before-starting-a-flow-from-a-checklist.md)
+- [URL pattern matching](https://help.userflow.com/docs/url-pattern-matching.md): Master URL pattern matching in Userflow to control content based on current page conditions, enhancing user experience and flow management.
+- [Users and Segments](https://help.userflow.com/docs/users-and-segments.md): Manage and segment your Userflow users effortlessly with filters, attributes, and event-based actions for targeted flows and analytics.
+- [Environments](https://help.userflow.com/docs/environments.md)
+- [Setting up environments and versions](https://help.userflow.com/docs/setting-up-environments-and-versions.md): Manage content versions and test in isolated environments with Userflow's powerful version control and easy publishing features. Optimize your flows risk-free!
+- [FAQ: Storing user data within the EU](https://help.userflow.com/docs/choosing-the-eu-or-us-for-customer-data-storage.md): Userflow prioritizes data security, offering flexible storage options in North America or Europe to meet compliance needs and enhance user privacy.
+- [Flows & Smartflows](https://help.userflow.com/docs/flows.md)
+- [Getting started with Flows & Smartflows](https://help.userflow.com/docs/getting-started-with-flows.md): Learn how to create interactive Flows and Smartflows for user onboarding, feature adoption, and in-app guidance to enhance user experience.
+- [Flow builder basics](https://help.userflow.com/docs/flow-builder-basics.md): Learn how to create interactive flows for user onboarding and feature adoption, enhancing engagement with personalized, context-aware guidance.
+- [Flow best Practices](https://help.userflow.com/docs/flow-best-practices.md): Learn key do's and don'ts for creating engaging user flows with Userflow, focusing on action-based guidance and clear communication for better onboarding.
+- [Creating AI-generated Smartflows](https://help.userflow.com/docs/creating-smartflows.md): Transform your onboarding with Smartflows—AI-driven flows that save time, enhance user engagement, and require no technical skills to create.
+- [Writing effective purpose statements for Smartflow creation](https://help.userflow.com/docs/smartflows-purpose-statement.md)
+- [How to start flows or checklists](https://help.userflow.com/docs/how-to-start-flows-or-checklists-3.md): Userflow offers versatile task management with auto-start conditions, manual triggers, and integrations to enhance productivity and streamline operations.
+- [Proactive Flow Monitoring with Signals](https://help.userflow.com/docs/ai-insights.md)
+- [Hidden steps](https://help.userflow.com/docs/hidden-steps.md): Learn how to implement hidden steps in Userflow while ensuring users don't get stuck, optimizing their experience with effective triggers and flows.
+- [Adding and deleting steps in a Flow](https://help.userflow.com/docs/adding-and-deleting-steps.md): Learn how to add, delete, and insert steps in Userflow’s Flow Builder with quick and drag-and-drop methods for seamless flow management.
+- [Selecting elements](https://help.userflow.com/docs/tooltip-element-selection.md): Easily anchor tooltips in your app with Userflow's automatic element selection, ensuring precise placement using CSS classes and unique IDs.
+- [Selecting elements in a nested menu](https://help.userflow.com/docs/nested-menus.md): Master nested menus with step-by-step tooltips that guide users through clicks, ensuring a seamless navigation experience.
+- [Selecting elements in a dropdown menu](https://help.userflow.com/docs/dropdowns.md): Learn how to use Userflow with dropdowns, including triggers for input, clicks, and buttons to enhance user experience and streamline transitions.
+- [How to navigate to a page when a Flow starts](https://help.userflow.com/docs/go-to-page-when-flow-starts.md): Learn three effective methods to navigate users to the right page in Flow, enhancing their experience with checklists and resource centers.
+- [Using Evaluate JavaScript](https://help.userflow.com/docs/using-enhanced-javascript.md)
+- [Snooze a flow](https://help.userflow.com/docs/snooze-a-flow.md)
+- [Step templates](https://help.userflow.com/docs/step-templates.md): Revolutionize your content creation with step templates that save time, streamline flows, and enhance efficiency in building onboarding and multi-step processes.
+- [Chrome Extension not working](https://help.userflow.com/docs/chrome-extension-not-working-1.md)
+- [Element not found](https://help.userflow.com/docs/element-not-found.md): Learn why Userflow can't find elements and explore solutions for issues like dynamic text, long load times, and CSS changes to enhance your flows.
+- [Disconnected steps](https://help.userflow.com/docs/disconnected-steps.md)
+- [Flow not starting](https://help.userflow.com/docs/flow-not-starting.md): Troubleshoot your Userflow.js issues with this guide: check installation, flow conditions, and user settings to ensure smooth auto-start functionality.
+- [Missing tooltip target behavior](https://help.userflow.com/docs/missing-tooltip-target-behavior.md): Learn how to configure Userflow's missing tooltip target behavior, including auto-dismiss, warnings, and speech bubble options for better user experience.
+- [Userflow.js installation check](https://help.userflow.com/docs/userflowjs-installation-check-1.md): Ensure your Userflow setup is correct with our guide on installation, debugging, and user identification for seamless content publishing.
+- [Using the Debugger for auto-start conditions](https://help.userflow.com/docs/using-the-debugger-for-auto-start-conditions-1.md): Diagnose flow issues with the Userflow Debugger. Learn to check Auto Start conditions and resolve triggering problems effectively.
+- [Flow targeting and audience rules](https://help.userflow.com/docs/flow-targeting-and-audience-rules.md)
+- [Flow step timeouts — what they are and how to handle them](https://help.userflow.com/docs/flow-step-timeouts.md)
+- [Understanding flow dismiss, snooze, and restart](https://help.userflow.com/docs/understanding-flow-dismiss-snooze-and-restart.md)
+- [Embedding videos, images, and forms](https://help.userflow.com/docs/embedding-videos-images-and-forms.md): Enhance your Userflow with rich media by embedding videos, forms, and images. Learn how to auto-play videos and troubleshoot embedding issues.
+- [Resource Center](https://help.userflow.com/docs/resource-center-1.md)
+- [Implementing a Beamer Feedback block in a Resource Center](https://help.userflow.com/docs/implementing-beamer-feedback-block-in-a-resource-center.md)
+- [Resource Center Implementation Guide](https://help.userflow.com/docs/resource-center.md): Empower users with a personalized resource center in your app, featuring customizable help blocks, knowledge base search, and seamless user support.
+- [Event Trackers](https://help.userflow.com/docs/event-trackers.md)
+- [Button Click Tracking](https://help.userflow.com/docs/button-click-tracking.md)
+- [No-code event tracking](https://help.userflow.com/docs/no-code-event-tracking.md): Userflow allows non-technical teams to set up no-code event tracking, enhancing analytics and user engagement while ensuring privacy and security.
+- [Analytics, testing, & measuring performance](https://help.userflow.com/docs/analytics-testing-measuring-performance.md)
+- [Analytics](https://help.userflow.com/docs/analytics.md): Analyze user engagement with Userflow's analytics for flows, checklists, and launchers to optimize onboarding and boost content performance.
+- [Standard Attributes](https://help.userflow.com/docs/standard-attributes.md)
+- [Dashboards](https://help.userflow.com/docs/dashboards.md)
+- [Chart Builder](https://help.userflow.com/docs/chart-builder.md)
+- [No-code event tracking](https://help.userflow.com/docs/no-code-event-tracking-2.md): Userflow allows non-technical teams to set up no-code event tracking, enhancing analytics and user engagement while ensuring privacy and security.
+- [A/B testing](https://help.userflow.com/docs/ab-testing.md): Easily A/B test Userflow content with random attributes, optimizing user experiences and analyzing performance for better results.
+- [Setting up custom alerts to track performance](https://help.userflow.com/docs/alerting.md): Monitor Flow performance with Userflow's custom alert policies and AI-driven FlowAI Insights for proactive issue detection and quick intervention.
+- [Track flow button clicks](https://help.userflow.com/docs/track-flow-button-clicks.md): Learn how to track button clicks in tooltips or modals using hidden steps or user attributes for effective user engagement analysis.
+- [Userflow-generated events](https://help.userflow.com/docs/userflow-generated-events.md): Explore Userflow events generated during user interactions with flows and checklists, enhancing your product analytics with detailed insights.
+- [Funnel Analysis](https://help.userflow.com/docs/funnel-analysis.md)
+- [Product Adoption Insights](https://help.userflow.com/docs/product-adoption-insights.md)
+- [AI Condition Builder](https://help.userflow.com/docs/ai-condition-builder.md)
+- [Chart Builder — Group By](https://help.userflow.com/docs/chart-builder-group-by.md)
+- [Getting insights from Product Adoption Insights — a practical guide](https://help.userflow.com/docs/product-adoption-insights-guide.md)
+- [Customizations](https://help.userflow.com/docs/customizations-section.md)
+- [Removing the 'Made with Userflow' watermark](https://help.userflow.com/docs/removing-made-with-userflow-watermark.md)
+- [Customizing Themes](https://help.userflow.com/docs/customizing-themes.md): Customize your Userflow components with your app's look and feel, including light and dark modes, using our no-code editor. Adjust colors, fonts, and more to create a seamless user experience without coding.
+- [Iframes](https://help.userflow.com/docs/iframes.md): Userflow supports iframes natively with specific rules. Learn how to implement iframes effectively in your app for seamless user flows.
+- [Simplify multilingual content creation with AI Translate and Localization](https://help.userflow.com/docs/localization.md): Streamline global reach with Userflow's localization feature, enabling easy multi-language support and efficient content translation for diverse audiences.
+- [Embedding videos, images, and forms](https://help.userflow.com/docs/embed-videos-forms-and-images.md): Enhance your Userflow with rich media by embedding videos, forms, and images. Learn how to auto-play videos and troubleshoot embedding issues.
+- [Mobile](https://help.userflow.com/docs/mobile.md): Optimize Userflow for mobile web apps with responsive content, conditional variations, and separate flows for desktop and mobile users.
+- [Voice-over](https://help.userflow.com/docs/voice-over.md): Enable voice-over in your flows with synthetic voices or manual recordings. Enhance guidance with audio for a better user experience.
+- [Custom CSS — Troubleshooting layout issues](https://help.userflow.com/docs/custom-css-troubleshooting.md)
+- [Troubleshooting](https://help.userflow.com/docs/troubleshooting.md)
+- [Chrome Extension not working](https://help.userflow.com/docs/chrome-extension-not-working.md)
+- [Event tracker performance optimization](https://help.userflow.com/docs/optimize-event-tracker-performance.md)
+- [Launcher/Banner not showing](https://help.userflow.com/docs/launcherbanner-not-showing.md): Troubleshoot your Userflow.js installation issues, check launcher visibility, and ensure user conditions are met for optimal app performance.
+- [Userflow.js installation check](https://help.userflow.com/docs/userflowjs-installation-check.md): Ensure your Userflow setup is correct with our guide on installation, debugging, and user identification for seamless content publishing.
+- [Using the Debugger for auto-start conditions](https://help.userflow.com/docs/using-the-debugger-for-auto-start-conditions.md): Diagnose flow issues with the Userflow Debugger. Learn to check Auto Start conditions and resolve triggering problems effectively.
+- [Troubleshooting Userflow.js Performance](https://help.userflow.com/docs/troubleshooting-userflow-js-performance.md)
+- [Managing your account](https://help.userflow.com/docs/managing-your-account-2.md)
+- [Updating billing details](https://help.userflow.com/docs/updating-billing-details.md)
+- [Userflow pricing and packages](https://help.userflow.com/docs/userflow-pricing-and-packages.md)
+- [Deleting or resetting user data](https://help.userflow.com/docs/deletingresetting-user-data.md): Easily delete user data in Userflow for testing, GDPR compliance, or resetting sessions. Manage flows and checklists effectively with simple steps.
+- [Delete and duplicate content](https://help.userflow.com/docs/delete-and-duplicate-content.md)
+- [Understanding your Userflow plan — features, limits, and plan changes](https://help.userflow.com/docs/plans-and-billing.md)
+- [Canceling your Userflow subscription or finding your renewal date](https://help.userflow.com/docs/canceling-your-userflow-subscription.md)
+- [Managing Your Userflow Subscription and Billing](https://help.userflow.com/docs/managing-your-userflow-subscription-and-billing.md)
+- [How Userflow Tracks and Bills Monthly Active Users (MAUs)](https://help.userflow.com/docs/how-userflow-tracks-and-bills-monthly-active-users-maus.md)
+- [Security, privacy, and compliance at Userflow](https://help.userflow.com/docs/security-privacy-and-compliance.md)
+- [Settings](https://help.userflow.com/docs/settings.md)
+- [Managing Teams in Userflow](https://help.userflow.com/docs/team-management-1.md): Collaborate effectively in Userflow by managing team roles, adding members, and transferring ownership for seamless onboarding content creation.
+- [Setting up environments and versions](https://help.userflow.com/docs/environments-and-versions-1.md): Manage content versions and test in isolated environments with Userflow's powerful version control and easy publishing features. Optimize your flows risk-free!
+- [Identity verification](https://help.userflow.com/docs/identity-verification-1.md): Enhance security with identity verification in Userflow.js, preventing unauthorized data access and safeguarding user information effectively.
+- [Setting up custom alerts to track performance](https://help.userflow.com/docs/alerting-1.md): Monitor Flow performance with Userflow's custom alert policies and AI-driven FlowAI Insights for proactive issue detection and quick intervention.
+- [Integrations](https://help.userflow.com/docs/integrations-1.md)
+- [Integrations](https://help.userflow.com/docs/integrations.md)
+- [Integrations](https://help.userflow.com/docs/integration-old.md)
+- [Amplitude](https://help.userflow.com/docs/amplitude.md): Integrate Userflow with Amplitude to analyze user interactions, sync cohorts, and enhance your product analytics for better targeting and insights.
+- [Heap](https://help.userflow.com/docs/heap.md): Integrate Userflow with Heap to analyze user interactions, sync segments, and enhance your product analytics for better insights and targeted content.
+- [HubSpot](https://help.userflow.com/docs/hubspot.md): Sync HubSpot properties with Userflow in real-time to personalize onboarding and automate workflows based on user interactions. Set up your integration today!
+- [Intercom](https://help.userflow.com/docs/intercom.md)
+- [LogRocket](https://help.userflow.com/docs/logrocket.md)
+- [Mixpanel](https://help.userflow.com/docs/mixpanel.md): Integrate Userflow with Mixpanel to analyze user interactions, sync cohorts, and enhance your product analytics for better targeting and insights.
+- [Rudderstack](https://help.userflow.com/docs/rudderstack.md)
+- [Segment](https://help.userflow.com/docs/segment.md): Integrate Userflow with Segment to connect data sources and destinations, ensuring seamless event tracking and user attribute management across environments.
+- [Salesforce](https://help.userflow.com/docs/salesforce.md): Sync Salesforce fields with Userflow in real-time to personalize onboarding, automate workflows, and enhance user engagement seamlessly.
+- [Zapier](https://help.userflow.com/docs/zapier.md): Connect and automate Userflow with 5,000+ apps using Zapier to enhance productivity, manage user data, and streamline workflows effortlessly.
+- [Zendesk](https://help.userflow.com/docs/zendesk.md)
+- [Chat and Knowledge bases](https://help.userflow.com/docs/chat-and-knowledge-bases.md): Integrate Userflow with live chat and knowledge base providers for seamless user support and efficient data sync without complex setups.
+- [Custom integrations](https://help.userflow.com/docs/custom-integrations.md)
+- [Connecting Slack to Userflow](https://help.userflow.com/docs/connecting-slack-to-userflow.md)
+- [Building Notification Workflows with Notification Center](https://help.userflow.com/docs/building-notification-workflows-notification-center.md)
+- [Connect Userflow to Claude, ChatGPT, and other AI tools with the Userflow MCP](https://help.userflow.com/docs/mcp.md)
+- [Creating and publishing with MCP write tools](https://help.userflow.com/docs/mcp-write-tools.md)
+- [Migrating from a Zapier-based Slack setup to the native Slack integration](https://help.userflow.com/docs/migrating-from-zapier-to-native-slack-integration.md)
+- [Developers](https://help.userflow.com/docs/developers.md)
+- [Userflow.js Installation](https://help.userflow.com/docs/userflowjs-installation.md): Install Userflow.js in your web app with simple steps to enhance user experience without affecting load speed. Secure your users' data effectively!
+- [Using Userflow in Angular and Shell (Micro-Frontend) Applications](https://help.userflow.com/docs/using-userflow-in-angular-and-shell-micro-frontend-applications.md): Learn how to integrate Userflow in Angular SPAs with shell or micro-frontend architecture, ensuring smooth user flows and effective identity management.
+- [Userflow.js installation in GoHighLevel](https://help.userflow.com/docs/userflowjs-installation-in-gohighlevel.md): Install Userflow.js to create flows, checklists, and surveys in GoHighLevel. Follow our guide to enhance user engagement with custom attributes.
+- [Userflow.js installation in Google Tag Manager](https://help.userflow.com/docs/userflowjs-installation-in-google-tag-manager.md): Learn how to install Userflow.js in Google Tag Manager and pass user attributes for targeted flows, enhancing user experience effectively.
+- [Userflow.js Reference](https://help.userflow.com/docs/userflowjs-reference.md)
+- [Userflow API Reference](https://help.userflow.com/docs/userflow-api-reference.md)
+- [Identity verification](https://help.userflow.com/docs/identity-verification.md): Enhance security with identity verification in Userflow.js, preventing unauthorized data access and safeguarding user information effectively.
+- [Content Security Policy](https://help.userflow.com/docs/content-security-policy.md)
+- [Element inference and dynamic class names](https://help.userflow.com/docs/element-inference-and-dynamic-class-names.md): Optimize Userflow.js for dynamic class names and IDs to enhance element inference and ensure accurate targeting in your app. Get expert configuration help!
+- [Use Cases](https://help.userflow.com/docs/use-cases.md)
+- [Turn new users into power users](https://help.userflow.com/docs/turn-new-users-into-power-users.md): Enhance user onboarding with Userflow's smart checklists, role-based pathways, and just-in-time learning for seamless product adoption and feature discovery.
+- [Drive product adoption](https://help.userflow.com/docs/drive-adoption.md): Optimize user onboarding with Userflow to enhance product adoption, reduce friction, and guide users to their "Aha" moment for lasting engagement.
+- [Collect feedback and sentiment](https://help.userflow.com/docs/collect-feedback.md): Transform user feedback collection with in-app surveys that capture real-time insights, enhancing response rates and product experience.
+- [Boost self-support](https://help.userflow.com/docs/boost-self-support.md): Create a self-service resource center within your app for instant help, reducing support tickets and enhancing user satisfaction with AI-powered assistance.
+- [AI Skills Library](https://help.userflow.com/docs/ai-skills-library.md)
+- [Install with AI](https://help.userflow.com/docs/install-with-ai.md): Install Userflow.js effortlessly with your AI coding agent, ensuring accurate initialization and user identification without manual coding hassles.
+- [userflow-flow-compare](https://help.userflow.com/docs/userflow-flow-compare.md)
+- [userflow-flow-segment-compare](https://help.userflow.com/docs/userflow-flow-segment-compare.md)
+- [userflow-nps-summariser](https://help.userflow.com/docs/userflow-nps-summariser.md)
+- [userflow-adoption-agent-topics](https://help.userflow.com/docs/userflow-adoption-agent-topics.md)
+- [userflow-segment-creator](https://help.userflow.com/docs/userflow-segment-creator.md)
+- [userflow-banner-creator](https://help.userflow.com/docs/userflow-banner-creator.md)
+- [userflow-announcement-creator](https://help.userflow.com/docs/userflow-announcement-creator.md)
+
+## Beamer
+
+- [Welcome to the Beamer help center](https://help.userflow.com/beamer/docs/welcome-to-the-beamer-knowledge-base.md)
+- [Getting Started](https://help.userflow.com/beamer/docs/getting-started.md)
+- [Beamer Developer Documentation](https://help.userflow.com/beamer/docs/install-beamer-on-your-website-or-app-1.md): Learn how to install Beamer on your website with our comprehensive developer documentation, including embed snippets, WordPress integration, and advanced customization options.
+- [How to change my password?](https://help.userflow.com/beamer/docs/how-to-change-my-password-1.md)
+- [How to install Beamer using our API?](https://help.userflow.com/beamer/docs/how-to-install-beamer-using-our-api-1.md): Implement Beamer in your app using our API to retrieve unread post counts and feed URLs securely via iframe or webview. Customize your integration easily!
+- [Using a custom domain for standalone pages](https://help.userflow.com/beamer/docs/using-a-custom-domain-with-beamer-1.md): Implement your Beamer Changelog with a custom domain for seamless updates, enhanced analytics, and a unified brand experience.
+- [How can I personalize emails with my logo?](https://help.userflow.com/beamer/docs/how-can-i-personalize-emails-with-my-logo.md)
+- [Inserting images into a post](https://help.userflow.com/beamer/docs/how-to-insert-images-1.md)
+- [Enabling comments and reactions](https://help.userflow.com/beamer/docs/how-to-enable-comments-and-reactions-1.md)
+- [Using Beamer Feedback](https://help.userflow.com/beamer/docs/how-do-i-use-beamer-feedback-1.md): Collect user feedback, enable community voting, and manage idea visibility with Beamer Feedback's public roadmap and customizable widgets.
+- [Setting up the Idea Portal](https://help.userflow.com/beamer/docs/how-do-i-set-up-the-idea-portal-1.md): Streamline user feedback with the Beamer Idea Portal, enabling easy idea submission, visibility controls, and team collaboration for actionable insights.
+- [How to get push notifications?](https://help.userflow.com/beamer/docs/how-to-get-push-notifications-1.md): Learn about push notifications, how to subscribe, and troubleshoot prompts to keep users updated even when they're not on your site or app.
+- [How to preview a post](https://help.userflow.com/beamer/docs/how-to-view-a-preview-of-my-beamer-1.md)
+- [Beamer Dashboard](https://help.userflow.com/beamer/docs/beamer-dashboard-1.md): Manage product communications and user feedback seamlessly with the Beamer Dashboard, your real-time command center for actionable insights and metrics.
+- [How to set up NPS using Beamer](https://help.userflow.com/beamer/docs/how-to-set-up-nps-using-beamer-1.md): Learn how to set up and configure an NPS survey widget with Beamer to measure customer loyalty and satisfaction effectively.
+- [Segment Beamer Feedback](https://help.userflow.com/beamer/docs/how-do-i-segment-beamer-feedback-2.md): Control feedback visibility with Beamer's segmentation tools. Target user groups precisely for relevant insights and better product decisions.
+- [Single sign-on (SAML SSO)](https://help.userflow.com/beamer/docs/saml-setup.md)
+- [Guides](https://help.userflow.com/beamer/docs/guides.md)
+- [Customizations & Settings](https://help.userflow.com/beamer/docs/customizations-settings.md)
+- [Selecting a default widget icon](https://help.userflow.com/beamer/docs/selecting-a-default-widget-icon.md)
+- [Auto-subscribe users to email updates](https://help.userflow.com/beamer/docs/auto-subscribe-users-to-email-updates.md): Enable Beamer's auto-subscription to automatically enroll users for email notifications, ensuring seamless updates and custom sender domain verification.
+- [Using a custom domain for standalone pages](https://help.userflow.com/beamer/docs/using-a-custom-domain-with-beamer.md): Implement your Beamer Changelog with a custom domain for seamless updates, enhanced analytics, and a unified brand experience.
+- [How to set up your custom sender domain](https://help.userflow.com/beamer/docs/how-to-set-up-your-custom-sender-domain.md)
+- [How to use Domain Whitelist?](https://help.userflow.com/beamer/docs/how-to-use-domain-whitelist.md)
+- [How to adjust the font size for the header title and in-app content?](https://help.userflow.com/beamer/docs/how-can-i-adjust-the-font-size-for-the-header-title-and-in-app-content.md)
+- [What can you change with appearance customization?](https://help.userflow.com/beamer/docs/what-can-you-change-with-appearance-customization.md)
+- [How to change the appearance to fit my site?](https://help.userflow.com/beamer/docs/how-to-change-the-appearance-to-fit-my-site.md)
+- [Can I change the Beamer icon on my website?](https://help.userflow.com/beamer/docs/can-i-change-the-beamer-icon-on-my-website.md)
+- [How to enable or disable the “Read More” button?](https://help.userflow.com/beamer/docs/how-to-enable-or-disable-the-read-more-button.md)
+- [How can I enable or disable the “Show Back Button” when in standalone mode?](https://help.userflow.com/beamer/docs/how-can-i-enable-or-disable-the-show-back-button-when-in-standalone-mode.md)
+- [How can I personalize emails with my logo?](https://help.userflow.com/beamer/docs/how-can-i-personalise-emails-with-my-logo.md)
+- [How to customize the position of the widget icon](https://help.userflow.com/beamer/docs/how-to-customise-the-position-of-the-widget-icon.md)
+- [How can I have separate widgets for different products but display all updates on a single standalone page?](https://help.userflow.com/beamer/docs/how-can-i-have-separate-widgets-for-different-products-but-display-all-updates-on-a-single-standalone-page.md)
+- [How to Change Website Name](https://help.userflow.com/beamer/docs/how-to-change-website-name.md)
+- [Enabling Beamer Notifications for Specific User Roles](https://help.userflow.com/beamer/docs/enabling-beamer-notifications-for-specific-user-roles.md)
+- [How to translate my posts in different languages?](https://help.userflow.com/beamer/docs/how-to-translate-my-posts-in-different-languages.md)
+- [What data does Beamer save and where is it stored?](https://help.userflow.com/beamer/docs/where-beamer-data-is-saved-and-what-is-the-data.md)
+- [How do I enable a list of months with posts on the standalone page?](https://help.userflow.com/beamer/docs/how-do-i-enable-a-list-of-months-with-posts-on-the-standalone-page.md)
+- [How to enable or disable animated posts when opening the sidebar?](https://help.userflow.com/beamer/docs/how-to-enable-or-disable-animated-posts-when-opening-the-sidebar.md)
+- [How do I enable the scroll bar in my feed?](https://help.userflow.com/beamer/docs/how-do-i-enable-the-scroll-bar-in-my-feed.md)
+- [How to enable or disable the search in the sidebar?](https://help.userflow.com/beamer/docs/how-to-enable-or-disable-the-search-in-the-sidebar.md)
+- [How to change the product name and description](https://help.userflow.com/beamer/docs/how-to-change-product-name-and-description.md)
+- [How to send user data to the Beamer script?](https://help.userflow.com/beamer/docs/how-to-send-user-data-to-the-beamer-script.md)
+- [Can I set multi-device synchronization?](https://help.userflow.com/beamer/docs/can-i-set-multi-device-synchronization.md)
+- [How can I block widgets for specific users?](https://help.userflow.com/beamer/docs/how-can-i-block-widgets-for-specific-users.md)
+- [How can I change the color of the top-bar?](https://help.userflow.com/beamer/docs/how-can-i-change-the-color-of-the-top-bar.md)
+- [How can I change the snippet position?](https://help.userflow.com/beamer/docs/how-can-i-change-the-snippet-position.md)
+- [How can I prevent my standalone page from being indexed by search engines?](https://help.userflow.com/beamer/docs/how-can-i-prevent-my-standalone-page-from-being-indexed-by-search-engines.md)
+- [How can I show my action link / CTA as a button?](https://help.userflow.com/beamer/docs/how-can-i-show-my-action-link-cta-as-a-button.md)
+- [Changelog](https://help.userflow.com/beamer/docs/changelog.md)
+- [Creating and managing posts](https://help.userflow.com/beamer/docs/creating-and-editing-posts.md)
+- [Creating and managing Changelog posts](https://help.userflow.com/beamer/docs/creating-and-managing-posts.md): Master post creation and management in Beamer with best practices, AI tools, and effective strategies for optimal engagement and organization.
+- [Changelog post templates](https://help.userflow.com/beamer/docs/changelog-post-templates.md): Create, save, and reuse post templates to streamline content creation, ensuring consistency and boosting productivity with Changelog's new feature.
+- [Adding a one or more categories to a post](https://help.userflow.com/beamer/docs/how-to-add-a-custom-category-to-a-post.md): Organize your posts in Beamer with custom categories, making it easier for your audience to find and filter content. Learn how to manage categories effectively.
+- [AI Content Generator for Changelog Posts](https://help.userflow.com/beamer/docs/ai-content-generator-for-changelog-posts.md): Create engaging changelog posts effortlessly with the AI Content Generator. Customize tone, length, and refine content to match your brand's voice.
+- [AI Translation for Changelog Posts](https://help.userflow.com/beamer/docs/ai-translation-for-changelog-posts.md)
+- [Scheduling a post (including expiration) in Beamer](https://help.userflow.com/beamer/docs/how-can-i-schedule-a-post-including-expiration-on-beamer.md)
+- [Pin or unpin a post](https://help.userflow.com/beamer/docs/how-to-highlight-or-pin-a-post.md): Pinning a post in your changelog feed maximizes visibility, highlights key updates, and boosts user engagement for important announcements.
+- [Change the order of a post](https://help.userflow.com/beamer/docs/how-to-change-the-order-of-my-posts.md)
+- [Pinning the topbar in Beamer](https://help.userflow.com/beamer/docs/is-it-possible-to-pin-the-topbar-in-beamer.md): Enhance your announcements with a topbar mode for high visibility, non-intrusive updates, and easy management - perfect for urgent messages!
+- [Pinning a post to the top of the feed](https://help.userflow.com/beamer/docs/can-i-pin-post-to-the-top-of-the-feed.md)
+- [Enable the auto-open widget for your posts](https://help.userflow.com/beamer/docs/how-to-enable-the-auto-open-widget-for-your-posts.md): Enable the auto-open widget to instantly display your latest updates, boosting user engagement without any clicks needed. Keep your audience informed!
+- [Enabling social media sharing for posts](https://help.userflow.com/beamer/docs/how-do-i-enable-social-media-sharing-for-my-posts.md)
+- [How to preview a post](https://help.userflow.com/beamer/docs/how-to-view-a-preview-of-my-beamer.md)
+- [Why is my post not appearing on the standalone page?](https://help.userflow.com/beamer/docs/why-is-my-post-not-appearing-on-the-standalone-page.md)
+- [Managing the visibility of the changelog](https://help.userflow.com/beamer/docs/managing-the-visibility-of-the-changelog.md)
+- [Troubleshooting: my post isn't publishing, scheduling, or showing](https://help.userflow.com/beamer/docs/troubleshooting-post-publishing-scheduling-visibility.md)
+- [Making bulk changes to Changelog posts](https://help.userflow.com/beamer/docs/making-bulk-changes-to-changelog-posts.md)
+- [Exporting your Changelog posts](https://help.userflow.com/beamer/docs/exporting-your-changelog-posts.md)
+- [Inserting content into posts](https://help.userflow.com/beamer/docs/inserting-content-into-posts-1.md)
+- [How can I embed a video in my Beamer post and set it to loop?](https://help.userflow.com/beamer/docs/how-can-i-embed-a-video-in-my-beamer-post-and-set-it-to-loop.md)
+- [What is the maximum size for uploading media files?](https://help.userflow.com/beamer/docs/what-is-the-maximum-size-for-uploading-media-files.md)
+- [Inserting images into a post](https://help.userflow.com/beamer/docs/how-to-insert-images.md)
+- [Inserting videos in posts](https://help.userflow.com/beamer/docs/how-to-insert-videos.md): Boost user engagement and feature adoption by embedding videos from platforms like YouTube and Vimeo in your posts for clearer communication and feedback.
+- [Adding links to posts](https://help.userflow.com/beamer/docs/how-to-add-a-link-to-a-post.md)
+- [Post comments and reactions](https://help.userflow.com/beamer/docs/post-comments-and-reactions.md)
+- [Enabling comments and reactions](https://help.userflow.com/beamer/docs/how-to-enable-comments-and-reactions.md)
+- [How to edit the Changelog header title and subtitle](https://help.userflow.com/beamer/docs/how-to-change-the-header-name.md)
+- [Feedback](https://help.userflow.com/beamer/docs/feedback.md): Beamer Feedback helps product teams collect and prioritize user feedback with an Idea Portal and Public Roadmap for effective customer engagement.
+- [Update voters automatically when an idea status changes](https://help.userflow.com/beamer/docs/update-voters-automatically-when-idea-status-changes.md): Keep customers informed with automated status change notifications for their ideas, enhancing transparency and streamlining communication in your product workflow.
+- [Using Beamer Feedback](https://help.userflow.com/beamer/docs/how-do-i-use-beamer-feedback.md): Collect user feedback, enable community voting, and manage idea visibility with Beamer Feedback's public roadmap and customizable widgets.
+- [Setting up the Idea Portal](https://help.userflow.com/beamer/docs/how-do-i-set-up-the-idea-portal.md): Streamline user feedback with the Beamer Idea Portal, enabling easy idea submission, visibility controls, and team collaboration for actionable insights.
+- [Setting up the Public Roadmap](https://help.userflow.com/beamer/docs/how-do-i-set-up-public-roadmaps.md): Enhance transparency and trust with Beamer's public roadmap, allowing users to view, customize, and engage with your product's development journey.
+- [Performing bulk actions on Ideas](https://help.userflow.com/beamer/docs/performing-bulk-actions-on-ideas.md): Streamline your workflow with bulk actions on the Ideas dashboard—edit visibility, merge requests, update status, and manage ideas efficiently.
+- [How can I prevent specific users from posting comments in Beamer Feedback?](https://help.userflow.com/beamer/docs/how-can-i-prevent-specific-users-from-posting-comments-in-beamer-feedback.md)
+- [Control who can vote on Ideas or submit comments](https://help.userflow.com/beamer/docs/how-do-i-control-who-can-vote-on-ideas.md): Control voting on ideas to address user pain points, maintain data quality, and prevent spam. Set email and name requirements for submissions easily.
+- [Set a Priority Score for User Feedback](https://help.userflow.com/beamer/docs/set-a-priority-score-for-user-feedback.md)
+- [Add a one-click feedback button to your site](https://help.userflow.com/beamer/docs/how-to-add-a-one-click-feedback-button-to-your-website.md)
+- [Create an Idea on behalf of a customer](https://help.userflow.com/beamer/docs/how-do-you-create-an-idea-on-behalf-of-a-customer.md)
+- [Reviewing or responding to Ideas and Comments](https://help.userflow.com/beamer/docs/how-do-you-review-or-respond-to-ideas-and-comments.md): Manage and respond to submitted ideas efficiently, ensuring no contribution is overlooked while providing valuable feedback to users.
+- [How do you notify a customer once the status of the Idea is changed?](https://help.userflow.com/beamer/docs/how-do-you-notify-a-customer-once-the-status-of-the-idea-is-changed.md)
+- [Changing the visibility of an Idea or an Idea comment](https://help.userflow.com/beamer/docs/can-you-make-an-idea-or-comment-visible-to-only-a-selected-set-of-users.md): Manage Idea visibility in the Idea Portal and Public Roadmap to maintain a competitive edge. Learn how to edit and filter visibility settings effectively.
+- [How do I connect Zapier with Beamer Feedback?](https://help.userflow.com/beamer/docs/how-do-i-connect-zapier-with-beamer-feedback.md): Automate your feedback workflows with Beamer Feedback and Zapier, sending user ideas to Slack, JIRA, and more to keep your team informed.
+- [Segment Beamer Feedback](https://help.userflow.com/beamer/docs/how-do-i-segment-beamer-feedback.md): Control feedback visibility with Beamer's segmentation tools. Target user groups precisely for relevant insights and better product decisions.
+- [How do I get more information on a comment via the Inbox?](https://help.userflow.com/beamer/docs/how-do-i-get-more-information-on-a-comment-via-the-inbox.md)
+- [Notifications](https://help.userflow.com/beamer/docs/notifications.md)
+- [What are push notifications?](https://help.userflow.com/beamer/docs/what-are-push-notifications.md)
+- [How to get push notifications?](https://help.userflow.com/beamer/docs/how-to-get-push-notifications.md): Learn about push notifications, how to subscribe, and troubleshoot prompts to keep users updated even when they're not on your site or app.
+- [How to set up and use push notifications?](https://help.userflow.com/beamer/docs/how-to-setup-and-use-push-notifications.md)
+- [How to use single user notifications?](https://help.userflow.com/beamer/docs/how-to-use-single-user-notifications.md)
+- [How to customize in-app notifications?](https://help.userflow.com/beamer/docs/how-to-customize-in-app-notifications.md)
+- [How to use custom domain for push notifications?](https://help.userflow.com/beamer/docs/custom-domain-for-push-notifications.md)
+- [How can I preview a email notifications in Beamer?](https://help.userflow.com/beamer/docs/how-can-i-preview-a-email-notifications-in-beamer.md)
+- [What is the maximum number of characters allowed in the snippet?](https://help.userflow.com/beamer/docs/what-is-the-maximum-number-of-characters-allowed-in-the-snippet.md)
+- [How can I upload the push notification logo?](https://help.userflow.com/beamer/docs/how-can-i-upload-the-push-notification-logo.md)
+- [How do I subscribe to email notifications, and how do they function?](https://help.userflow.com/beamer/docs/how-do-i-subscribe-to-email-notifications-and-how-do-they-function.md)
+- [What happens if I edit/republish a post?](https://help.userflow.com/beamer/docs/what-happens-if-i-edit-republish-a-post.md)
+- [How do two boosted announcements work?](https://help.userflow.com/beamer/docs/how-do-two-boosted-announcements-work.md)
+- [How is the Unread Notification/Badge Count Calculated?](https://help.userflow.com/beamer/docs/how-is-the-unread-notification-badge-count-calculated.md)
+- [How to unblock notification permissions on any browser](https://help.userflow.com/beamer/docs/how-to-unblock-notification-permissions-on-any-browser.md)
+- [Should boosted announcements be displayed only once to the user?](https://help.userflow.com/beamer/docs/should-boosted-announcements-be-displayed-only-once-to-the-user.md)
+- [NPS](https://help.userflow.com/beamer/docs/nps.md)
+- [Automatic NPS email responses](https://help.userflow.com/beamer/docs/automatic-nps-email-response.md)
+- [Creating and editing NPS surveys](https://help.userflow.com/beamer/docs/creating-and-editing-nps-surveys.md)
+- [How to set up NPS using Beamer](https://help.userflow.com/beamer/docs/how-to-install-your-own-nps-using-beamer.md): Learn how to set up and configure an NPS survey widget with Beamer to measure customer loyalty and satisfaction effectively.
+- [How to customize NPS surveys](https://help.userflow.com/beamer/docs/how-to-customize-nps-surveys.md): Customize your Beamer NPS survey with color changes, feedback options, and multiple choice questions to enhance user engagement and branding.
+- [How to Modify the NPS Appearance?](https://help.userflow.com/beamer/docs/how-to-modify-the-nps-appearance.md)
+- [How can the NPS Question and Appearance be changed?](https://help.userflow.com/beamer/docs/how-can-the-nps-question-and-appearance-be-changed.md)
+- [Manually Trigger the NPS Widget for Testing Purposes](https://help.userflow.com/beamer/docs/manually-trigger-the-nps-widget-for-testing-purposes.md)
+- [How to send NPS surveys by email or link?](https://help.userflow.com/beamer/docs/how-to-send-nps-surveys-by-email-or-link.md)
+- [NPS quickstart: setup, customization, and timing at a glance](https://help.userflow.com/beamer/docs/nps-quickstart-setup-customization-and-timing-at-a-glance.md)
+- [Integration](https://help.userflow.com/beamer/docs/integration.md)
+- [How to Integrate NPS via API?](https://help.userflow.com/beamer/docs/how-to-integrate-nps-via-api.md): Integrate NPS into your app using the API with our guide on endpoints, API keys, and mobile setup for effective user feedback collection.
+- [Analytics and managing reactions](https://help.userflow.com/beamer/docs/analytics-and-managing-reactions.md)
+- [NPS Analytics Calculation](https://help.userflow.com/beamer/docs/nps-analytics-calculation.md)
+- [Can I switch the order of reaction in NPS?](https://help.userflow.com/beamer/docs/can-i-switch-the-order-of-reaction-in-nps.md)
+- [What are the different scores compared to the NPS 10 scale?](https://help.userflow.com/beamer/docs/what-are-the-different-scores-compared-to-the-nps-10-scale.md)
+- [Why am I getting low NPS responses?](https://help.userflow.com/beamer/docs/why-am-i-getting-low-nps-responses.md): Optimize your Net Promoter Score with targeted surveys, strategic timing, and user role filters to enhance feedback and insights effectively.
+- [How do the initial time and delay for NPS get calculated?](https://help.userflow.com/beamer/docs/how-do-the-initial-time-and-delay-for-nps-get-calculated.md)
+- [How to change the default date of NPS Analytics?](https://help.userflow.com/beamer/docs/how-to-change-the-default-date-of-nps-analytics.md)
+- [How does Beamer count the monthly NPS limit?](https://help.userflow.com/beamer/docs/how-does-beamer-count-the-monthly-nps-limit.md)
+- [How to upgrade or downgrade NPS plans?](https://help.userflow.com/beamer/docs/how-to-upgrade-or-downgrade-nps-plans.md)
+- [Dashboard & Analytics](https://help.userflow.com/beamer/docs/dashboard-and-analytics.md)
+- [Beamer Dashboard](https://help.userflow.com/beamer/docs/beamer-dashboard.md): Manage product communications and user feedback seamlessly with the Beamer Dashboard, your real-time command center for actionable insights and metrics.
+- [How to use analytics on Beamer](https://help.userflow.com/beamer/docs/how-to-use-analytics.md): Track user interactions with Beamer Analytics: total views, unique views, clicks, and more. Filter and segment users for deeper insights.
+- [What is the difference between basic and advanced analytics?](https://help.userflow.com/beamer/docs/what-is-advanced-analytics.md)
+- [What Counts as a Click?](https://help.userflow.com/beamer/docs/what-counts-as-a-click.md)
+- [What are Push Clicks?](https://help.userflow.com/beamer/docs/what-are-push-clicks.md)
+- [What are Users with Views?](https://help.userflow.com/beamer/docs/what-are-users-with-views.md)
+- [How are Views, Unique Views, and Clicks counted via API?](https://help.userflow.com/beamer/docs/how-are-views-unique-views-and-clicks-counted-via-api.md)
+- [What are Views and Unique Views?](https://help.userflow.com/beamer/docs/what-are-views-and-unique-views.md)
+- [Why are anonymous names getting displayed in NPS/Analytics?](https://help.userflow.com/beamer/docs/why-are-anonymous-names-getting-displayed-in-nps-analytics.md)
+- [Segmentation](https://help.userflow.com/beamer/docs/segmentation.md)
+- [Advanced Segmentation Guide](https://help.userflow.com/beamer/docs/advanced-segmentation-guide.md): Master advanced segmentation in Beamer to target users effectively, track interactions, and create custom segments for personalized messaging.
+- [What is user segmentation?](https://help.userflow.com/beamer/docs/what-are-segmented-notifications.md)
+- [Segment Beamer Feedback](https://help.userflow.com/beamer/docs/how-do-i-segment-beamer-feedback-1.md): Control feedback visibility with Beamer's segmentation tools. Target user groups precisely for relevant insights and better product decisions.
+- [How to use linked segments](https://help.userflow.com/beamer/docs/how-to-use-linked-segments.md): Build smarter segments with Linked Segments that auto-update. Easily create, link, and manage user segments without manual adjustments.
+- [How to use segment by URL](https://help.userflow.com/beamer/docs/how-to-use-segment-by-url.md)
+- [What is the difference between internal and external “AND” or “OR” conditions when creating filters?](https://help.userflow.com/beamer/docs/what-is-the-difference-between-internal-and-external-and-or-or-conditions-when-creating-filters.md)
+- [How are segments combined in Beamer? Can I use AND and OR?](https://help.userflow.com/beamer/docs/how-are-segments-combined-in-beamer-can-i-use-and-and-or.md)
+- [How do I add a user ID to the segment, and is there a maximum limit for segmentation?](https://help.userflow.com/beamer/docs/how-do-i-add-a-user-id-to-the-segment-and-is-there-a-maximum-limit-for-segmentation.md)
+- [How to remove users from User Segmentation (Basic Segmentation)?](https://help.userflow.com/beamer/docs/how-to-remove-users-from-user-segmentation-basic-segmentation.md)
+- [Why is my segmentation post not appearing on the standalone page?](https://help.userflow.com/beamer/docs/why-is-my-segmentation-post-not-appearing-on-the-standalone-page.md)
+- [How to use segmentation](https://help.userflow.com/beamer/docs/how-to-use-segmentation.md)
+- [Managing Your Account](https://help.userflow.com/beamer/docs/managing-your-account.md)
+- [How to change my password?](https://help.userflow.com/beamer/docs/how-to-change-my-password.md)
+- [Pricing & Subscriptions](https://help.userflow.com/beamer/docs/pricing-subscriptions.md)
+- [How much does User Onboarding cost?](https://help.userflow.com/beamer/docs/how-much-does-user-onboarding-cost.md)
+- [How to set or change a payment method](https://help.userflow.com/beamer/docs/how-set-and-change-a-payment-method.md)
+- [Is User Onboarding a Beamer product?](https://help.userflow.com/beamer/docs/is-user-onboarding-a-beamer-product.md)
+- [How are Monthly Active Users calculated?](https://help.userflow.com/beamer/docs/how-are-monthly-active-users-calculated.md)
+- [How can I reduce MAU’s? (Monthly Active Users)](https://help.userflow.com/beamer/docs/how-can-i-reduce-maus-monthly-active-users.md)
+- [Can I use a Beamer account on multiple websites?](https://help.userflow.com/beamer/docs/can-i-use-a-beamer-account-on-multiple-websites.md)
+- [Is Beamer really free?](https://help.userflow.com/beamer/docs/is-beamer-really-free.md)
+- [What happens if I exceed my plan’s limits?](https://help.userflow.com/beamer/docs/what-happens-if-i-exceed-my-plans-limits.md)
+- [Is there any limit for API requests?](https://help.userflow.com/beamer/docs/is-there-any-message-limit-for-single-user-notifications.md)
+- [What is Beamer’s privacy policy?](https://help.userflow.com/beamer/docs/what-is-beamers-privacy-policy.md)
+- [What are Beamer’s terms of service?](https://help.userflow.com/beamer/docs/what-are-beamers-terms-of-service.md)
+- [What are my payment options?](https://help.userflow.com/beamer/docs/what-are-my-payment-options.md)
+- [How do I upgrade my account?](https://help.userflow.com/beamer/docs/how-to-upgrade-my-account.md)
+- [Can I cancel my subscription?](https://help.userflow.com/beamer/docs/can-i-cancel-my-subscription.md)
+- [Find and manage your invoices](https://help.userflow.com/beamer/docs/find-and-manage-your-invoices.md)
+- [How to downgrade or change your plan](https://help.userflow.com/beamer/docs/how-to-downgrade-or-change-your-plan.md)
+- [Security and compliance](https://help.userflow.com/beamer/docs/security-and-compliance.md)
+- [How to manage multiple accounts](https://help.userflow.com/beamer/docs/how-to-manage-multiple-accounts.md)
+- [Team Management](https://help.userflow.com/beamer/docs/team-management.md)
+- [How to invite my team?](https://help.userflow.com/beamer/docs/how-to-invite-my-team.md)
+- [How to delete users?](https://help.userflow.com/beamer/docs/how-to-delete-users.md)
+- [How to assign roles and permissions?](https://help.userflow.com/beamer/docs/how-to-assign-roles-and-permissions.md): Manage your team effectively in Beamer by assigning roles and permissions, enabling collaboration, and customizing user access for optimal productivity.
+- [Requesting account and data deletion](https://help.userflow.com/beamer/docs/requesting-account-and-data-deletion.md)
+- [Troubleshooting: I can't log in to Beamer](https://help.userflow.com/beamer/docs/troubleshooting-i-cant-log-in-to-beamer.md)
+- [Installing Beamer](https://help.userflow.com/beamer/docs/installing-beamer.md)
+- [Steps to Inject User Data into Beamer script in React](https://help.userflow.com/beamer/docs/steps-to-inject-user-data-into-beamer-script-in-react.md)
+- [How to add Beamer to Squarespace?](https://help.userflow.com/beamer/docs/how-to-add-beamer-to-squarespace.md)
+- [How to add Beamer to Simvoly?](https://help.userflow.com/beamer/docs/how-to-add-beamer-to-simvoly.md)
+- [How to install Beamer on your website or app?](https://help.userflow.com/beamer/docs/how-to-install-beamer-on-your-website-or-app.md)
+- [How to install Beamer using our API?](https://help.userflow.com/beamer/docs/how-to-install-beamer-using-our-api.md): Implement Beamer in your app using our API to retrieve unread post counts and feed URLs securely via iframe or webview. Customize your integration easily!
+- [How to add Beamer as a menu item using our script?](https://help.userflow.com/beamer/docs/how-to-add-beamer-as-a-menu-item-using-our-script.md)
+- [How to install Beamer on my WordPress account?](https://help.userflow.com/beamer/docs/how-to-install-beamer-on-my-wordpress-account.md)
+- [How to add Beamer as a menu item using our WordPress plugin?](https://help.userflow.com/beamer/docs/how-to-add-beamer-as-a-menu-item-using-our-wordpress-plugin.md): Learn how to add Beamer as a menu item in WordPress using three simple methods: quick implementation, CSS class, or ID selection.
+- [Embedding Beamer Script in Next.js](https://help.userflow.com/beamer/docs/embedding-beamer-script-in-next-js.md)
+- [Embedding Beamer Script into React Applications](https://help.userflow.com/beamer/docs/embedding-beamer-script-into-react-applications.md)
+- [Embedding Beamer Script in Vanilla React](https://help.userflow.com/beamer/docs/embedding-beamer-script-in-vanilla-react.md)
+- [Embedding Beamer Script in Vite + React](https://help.userflow.com/beamer/docs/embedding-beamer-script-in-vite-react.md)
+- [Beamer Developer Documentation](https://help.userflow.com/beamer/docs/beamer-developer-documentation.md): Learn how to install Beamer on your website with our comprehensive developer documentation, including embed snippets, WordPress integration, and advanced customization options.
+- [Troubleshooting: the Beamer widget isn't appearing on my site](https://help.userflow.com/beamer/docs/troubleshooting-the-beamer-widget-isnt-appearing-on-my-site.md)
+- [Integrations](https://help.userflow.com/beamer/docs/integrations.md)
+- [Integrating Slack with Beamer](https://help.userflow.com/beamer/docs/slack-integration.md)
+- [How to set up a HubSpot integration in Beamer](https://help.userflow.com/beamer/docs/how-to-set-up-a-hubspot-integration-in-beamer.md)
+- [How to connect Beamer and Segment](https://help.userflow.com/beamer/docs/how-to-create-a-segment-integration-in-beamer.md)
+- [How to implement Google Analytics 4(GA4)?](https://help.userflow.com/beamer/docs/how-to-implement-google-analytics-4ga4.md)
+- [What are UTM parameters?](https://help.userflow.com/beamer/docs/what-are-utm-parameters.md)
+- [Developers](https://help.userflow.com/beamer/docs/developers.md)
+- [Beamer Developer Documentation](https://help.userflow.com/beamer/docs/developer-documentation.md): Learn how to install Beamer on your website with our comprehensive developer documentation, including embed snippets, WordPress integration, and advanced customization options.
+- [Beamer API Reference](https://help.userflow.com/beamer/docs/beamer-api-reference.md)
+- [How to Add or Delete a Custom Attribute](https://help.userflow.com/beamer/docs/how-to-add-or-delete-a-custom-attribute.md)
+- [How to Integrate NPS via Webhooks](https://help.userflow.com/beamer/docs/how-to-integrate-nps-via-webhooks.md)
+- [How to resolve a 403 error in the API?](https://help.userflow.com/beamer/docs/how-to-resolve-a-403-error-in-api.md)
+- [What does “identified users” mean?](https://help.userflow.com/beamer/docs/what-does-identified-users-mean.md)
+- [Beamer Use Cases](https://help.userflow.com/beamer/docs/use-cases.md)
+- [Amplify reach](https://help.userflow.com/beamer/docs/amplify-reach.md): Amplify your reach with Beamer's in-app notifications, targeted updates, and analytics for effective customer communication.
+- [Increase user engagement](https://help.userflow.com/beamer/docs/increase-engagement.md): Transform user engagement with Beamer's interactive announcements, boosting interaction and adoption through rich media and targeted messaging strategies.
+- [Boost product adoption](https://help.userflow.com/beamer/docs/boost-adoption.md): Transform your SaaS product adoption with Beamer's in-app notifications, ensuring users discover features contextually for higher engagement and activation.
+- [Improve customer satisfaction](https://help.userflow.com/beamer/docs/improve-satisfaction.md): Transform customer satisfaction with Beamer's tools for real-time measurement, transparent communication, and proactive engagement to boost retention and loyalty.

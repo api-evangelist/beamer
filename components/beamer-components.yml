@@ -1,0 +1,74 @@
+generated: '2026-09-14'
+method: searched
+source: https://help.userflow.com/beamer/docs/developer-documentation
+docs: https://help.userflow.com/beamer/docs/developer-documentation
+description: >-
+  Beamer's primary integration surface is a client-side embed, not an SDK: one script tag plus a global
+  configuration object renders the changelog widget, the NPS survey and the feedback/ideas surfaces
+  inside the host application. These are embeddable UI components, distinct from the REST API.
+loader:
+  name: beamer-embed.js
+  url: https://app.getbeamer.com/js/beamer-embed.js
+  install: >-
+    Declare the global beamer_config object, then load the script (deferred) at the bottom of <body>.
+    The configuration object must be declared before the script is imported.
+  versioned: false
+  note: The loader URL is unpinned; see packages/beamer-packages.yml.
+config_object: beamer_config
+required_parameters:
+  - name: product_id
+    type: string
+    description: Identifies the product in Beamer; shown in the Embed section of the dashboard.
+parameter_groups:
+  basic: [product_id, selector]
+  display:
+    [display, display_position, top, right, bottom, left, embed, button, button_position, icon,
+     bounce, notification_prompt, notification_prompt_delay, nps_delay, ignore_boosted_announcements]
+  filter:
+    [language, filter, force_filter, filter_by_url, mobile, lazy, alert, force_button, counter,
+     first_visit_unread, standalone, post_request, delay]
+  callbacks:
+    [callback, onclick, onopen, onclose, onerror, onNpsShow, onNpsHide, onNpsScore, onNpsFeedback,
+     forceShowNPS, onInputFocus, onInputBlur]
+  user:
+    [user_firstname, user_lastname, user_email, user_id, multi_user, user_created_at]
+components:
+  - family: Changelog
+    name: Feed widget (sidebar / panel)
+    description: >-
+      Embedded changelog panel opened from any element named in the selector parameter, or from a
+      Beamer-rendered notification icon when no selector is given. Carries the unread bubble.
+  - family: Changelog
+    name: Embedded feed
+    description: Inline feed rendered into a host element (embed parameter) rather than a sidebar.
+  - family: Changelog
+    name: Standalone changelog page
+    description: >-
+      Hosted public changelog served from app.getbeamer.com/<product>/<language>, optionally on the
+      customer's own custom domain. Beamer runs its own at https://app.getbeamer.com/beamer/en.
+    docs: https://help.userflow.com/beamer/docs/using-a-custom-domain-with-beamer-1
+  - family: Changelog
+    name: In-app notifications
+    description: Pop-ups, top bars and snippets for boosted announcements.
+  - family: Changelog
+    name: Push notifications
+    description: Browser push subscription prompt, configured via notification_prompt / notification_prompt_delay.
+  - family: NPS
+    name: NPS survey widget
+    description: >-
+      In-app NPS prompt with its own lifecycle callbacks (onNpsShow, onNpsHide, onNpsScore,
+      onNpsFeedback) and a forceShowNPS trigger; nps_delay controls timing.
+  - family: Feedback
+    name: Idea portal / feature request board
+    description: Public or private idea submission and voting surface.
+    docs: https://help.userflow.com/beamer/docs/how-do-i-set-up-the-idea-portal-1
+  - family: Feedback
+    name: Public roadmap
+    description: Roadmap board built from feature requests. Beamer's own is at https://app.getbeamer.com/beamer/roadmap/en.
+  - family: Platform
+    name: WordPress plugin
+    description: First-party plugin that injects the embed for WordPress sites.
+    url: https://wordpress.org/plugins/beamer/
+customization:
+  custom_css: Pro and Enterprise plans only
+  themes: theme parameter on GET /url (Pro and up)

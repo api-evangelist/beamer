@@ -1,0 +1,74 @@
+generated: '2026-09-14'
+method: derived
+source: >-
+  https://getbeamer-api.pages.dev/, https://www.getbeamer.com/security,
+  https://help.userflow.com/beamer/docs/developer-documentation
+description: >-
+  Standards and cross-cutting conventions the Beamer API does and does not conform to, asserted from
+  the published reference and the company's own compliance pages. Beamer's market (product changelog /
+  in-app announcement tooling) has no domain interchange standard, so no domain_standard entry is
+  claimed — a reward-only slot left honestly empty.
+entries:
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      The reference documents a single apiKey security definition (Beamer-Api-Key, in header). No
+      authorization endpoint, token endpoint or OAuth flow is published, and
+      /.well-known/oauth-authorization-server 404s on every host.
+  - id: oidc
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404 on every Beamer host (probed 2026-09-14).
+  - id: rfc9457
+    conforms: false
+    evidence: >-
+      Errors are returned as a bare JSON string (observed: "The API key is invalid." on a 401 from
+      GET https://api.getbeamer.com/v0/url), not application/problem+json.
+  - id: rfc8594
+    conforms: false
+    evidence: >-
+      No Deprecation or Sunset headers are documented; the only deprecation signal is a "[Deprecated]"
+      label on the autoOpen field.
+  - id: idempotency
+    conforms: false
+    evidence: >-
+      No Idempotency-Key header or client request identifier appears anywhere in the reference; a
+      retried POST creates a duplicate.
+  - id: pagination
+    conforms: true
+    evidence: >-
+      Page-number pagination via page + maxResults on every collection read, with a documented maximum
+      page size of 10 and a parallel /count endpoint per collection.
+  - id: iso8601
+    conforms: true
+    evidence: All dates (date, dueDate, firstSeen, lastSeen, editionDate) are documented as ISO-8601.
+  - id: iso639
+    conforms: true
+    evidence: >-
+      Language parameters and the Translation.language field are documented as ISO-639 two-letter
+      codes.
+  - id: webhooks
+    conforms: true
+    evidence: >-
+      Four documented event types delivered as JSON POSTs with a Beamer-Webhook-Secret header. No
+      AsyncAPI document, no HMAC signature. See asyncapi/beamer-webhooks.yml.
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      "Beamer is GDPR Compliant and has the Data Processing Agreements in place"
+      (https://www.getbeamer.com/security), backed by an API-level erasure endpoint, DELETE /privacy
+      ("Deletes user data").
+  - id: soc2
+    conforms: true
+    evidence: >-
+      SOC 2 published on https://www.getbeamer.com/security and on the trust center at
+      trust.userflow.com (Vanta-hosted), which trust.getbeamer.com 301s to.
+  - id: openapi
+    conforms: false
+    evidence: >-
+      No OpenAPI or Swagger document is served on any host. The reference at getbeamer-api.pages.dev
+      is Spectacle-generated HTML — it was built FROM a spec that Beamer does not publish.
+domain_standard:
+  applicable: false
+  note: >-
+    No interchange standard governs product-changelog / release-note APIs. Nothing to claim, and
+    nothing is lost by the absence.

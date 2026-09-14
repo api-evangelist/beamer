@@ -5,8 +5,12 @@ description: >-
   new features, and API changes to end users. It provides an embeddable feed widget,
   push notifications, email digests, and a public changelog page. The Beamer REST API
   enables programmatic management of posts, users, segments, and notification delivery.
-  Beamer is now part of the Userflow product suite. The API uses API key authentication
-  and supports OpenAPI specifications and Postman collections.
+  Beamer and Userflow now operate as one company, and Beamer's knowledge base has moved to
+  help.userflow.com/beamer. The REST API is versioned at https://api.getbeamer.com/v0, documents 49
+  operations across posts, comments, reactions, feature requests, users, NPS, team and GDPR erasure,
+  and authenticates with a single account-scoped API key sent in the Beamer-Api-Key header. Four
+  webhook event types are published. No OpenAPI document, Postman collection or MCP server is served
+  on any Beamer host.
 type: Index
 deliveryModel:
   model: unknown
@@ -38,16 +42,22 @@ tags:
   - Notification
   - Product Updates
   - User Engagement
+  - Webhooks
+  - NPS
+  - Feedback
 tags_raw:
   - Changelog
   - Deprecation
   - Notifications
   - Product Updates
   - User Engagement
+  - Webhooks
+  - NPS
+  - Feedback
 url: >-
   https://raw.githubusercontent.com/api-evangelist/beamer/refs/heads/main/apis.yml
 created: '2026-03-29'
-modified: '2026-04-19'
+modified: '2026-09-14'
 specificationVersion: '0.23'
 apis:
   - aid: beamer:beamer
@@ -58,6 +68,8 @@ apis:
       count retrieval, post creation and management, user profile updates, and
       segment management. Authentication uses an API key from Beamer settings.
     humanURL: https://www.getbeamer.com/api
+    baseURL: https://api.getbeamer.com/v0
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/beamer.png
     tags:
       - Changelog
       - Notification
@@ -70,9 +82,27 @@ apis:
       - type: Documentation
         url: https://www.getbeamer.com/api
       - type: APIReference
-        url: https://www.getbeamer.com/api
+        url: https://getbeamer-api.pages.dev/
+        title: Beamer API Reference (iframed by getbeamer.com/api)
       - type: Authentication
-        url: https://www.getbeamer.com/api
+        url: authentication/beamer-authentication.yml
+      - type: RateLimits
+        url: rate-limits/beamer-rate-limits.yml
+      - type: Plans
+        url: plans/beamer-plans-pricing.yml
+      - type: ErrorCatalog
+        url: errors/beamer-error-responses.yml
+      - type: Conventions
+        url: conventions/beamer-conventions.yml
+      - type: Lifecycle
+        url: lifecycle/beamer-lifecycle.yml
+      - type: DataModel
+        url: data-model/beamer-data-model.yml
+      - type: Webhooks
+        url: asyncapi/beamer-webhooks.yml
+      - type: X-MCPServerCandidate
+        url: mcp/beamer-mcp.yml
+        title: Candidate MCP tool surface derived from the published API reference (no server exists)
 
 common:
   - type: TrustCenter
@@ -88,12 +118,46 @@ common:
   - type: Documentation
     url: https://www.getbeamer.com/api
   - type: GettingStarted
-    url: https://www.getbeamer.com/help/how-to-install-beamer-using-our-api
+    url: https://help.userflow.com/beamer/docs/how-to-install-beamer-using-our-api
   - type: StatusPage
     url: https://status.getbeamer.com
   - type: Integrations
     url: https://apps.make.com/beamer
     title: Make (Integromat) Integration
+  - type: DeveloperPortal
+    url: https://help.userflow.com/beamer/docs/developer-documentation
+  - type: HelpCenter
+    url: https://help.userflow.com/beamer
+  - type: Support
+    url: https://www.getbeamer.com/contact
+  - type: Pricing
+    url: https://www.getbeamer.com/pricing
+  - type: SignUp
+    url: https://app.getbeamer.com/auth/signup
+  - type: TermsOfService
+    url: https://www.getbeamer.com/terms-of-service
+  - type: PrivacyPolicy
+    url: https://www.getbeamer.com/privacy-policy
+  - type: Roadmap
+    url: https://app.getbeamer.com/beamer/roadmap/en
+    title: Beamer's own public roadmap, run on Beamer
+  - type: ChangeLog
+    url: changelog/beamer-changelog.yml
+  - type: Packages
+    url: packages/beamer-packages.yml
+  - type: Components
+    url: components/beamer-components.yml
+  - type: LLMsTxt
+    url: llms/beamer-llms.txt
+  - type: Conformance
+    url: conformance/beamer-conformance.yml
+  - type: Compliance
+    url: conformance/beamer-conformance.yml
+    title: SOC 2 and GDPR, published on getbeamer.com/security and the trust center
+  - type: Security
+    url: security/beamer-vulnerability-disclosure.yml
+  - type: VulnerabilityDisclosure
+    url: security/beamer-vulnerability-disclosure.yml
   - type: Features
     data:
       - name: Changelog Feed Widget
@@ -141,3 +205,8 @@ integrations:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-14'
+  status: enriched
+  artifacts_added: 15
+  pass: local-v3

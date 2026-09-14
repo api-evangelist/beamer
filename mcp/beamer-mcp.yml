@@ -1,0 +1,133 @@
+generated: '2026-09-14'
+method: derived
+status: candidate
+source: https://getbeamer-api.pages.dev/
+description: >-
+  Beamer publishes no MCP server. This is a CANDIDATE tool surface derived from the 49 operations in
+  Beamer's own published API reference, recorded so the shape of an eventual server is visible — it is
+  not a server anyone can call. No endpoint is asserted, because none exists.
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: api-key
+  verified: derived
+  note: >-
+    Searched npm, PyPI and the web for a first-party Beamer MCP server: none. The github.com/getbeamer
+    organization publishes 0 public repositories. Third-party integration platforms (e.g. Composio)
+    advertise a hosted "Beamer MCP" built on top of Beamer's REST API; that is their deployment, not
+    Beamer's, and it is not recorded as a provider surface here.
+upstream_api:
+  base_url: https://api.getbeamer.com/v0
+  auth: Beamer-Api-Key header
+  operations_documented: 49
+candidate_tools:
+  - tool: beamer_get_feed_url
+    rest: GET /url
+    consequence: read
+  - tool: beamer_ping
+    rest: POST /ping
+    consequence: read
+  - tool: beamer_list_posts
+    rest: GET /posts
+    consequence: read
+  - tool: beamer_count_posts
+    rest: GET /posts/count
+    consequence: read
+  - tool: beamer_get_post
+    rest: GET /posts/{postId}
+    consequence: read
+  - tool: beamer_create_post
+    rest: POST /posts
+    consequence: write
+    note: Publishes to end users; irreversible in the sense that a push notification cannot be recalled.
+  - tool: beamer_update_post
+    rest: PUT /posts/{postId}
+    consequence: write
+  - tool: beamer_delete_post
+    rest: DELETE /posts/{postId}
+    consequence: destructive
+  - tool: beamer_list_post_comments
+    rest: GET /posts/{postId}/comments
+    consequence: read
+  - tool: beamer_create_post_comment
+    rest: POST /posts/{postId}/comments
+    consequence: write
+  - tool: beamer_delete_post_comment
+    rest: DELETE /posts/{postId}/comments/{commentId}
+    consequence: destructive
+  - tool: beamer_list_post_reactions
+    rest: GET /posts/{postId}/reactions
+    consequence: read
+  - tool: beamer_create_post_reaction
+    rest: POST /posts/{postId}/reactions
+    consequence: write
+  - tool: beamer_delete_post_reaction
+    rest: DELETE /posts/{postId}/reactions/{reactionId}
+    consequence: destructive
+  - tool: beamer_list_unread
+    rest: GET /unread
+    consequence: read
+  - tool: beamer_count_unread
+    rest: GET /unread/count
+    consequence: read
+  - tool: beamer_list_feature_requests
+    rest: GET /requests
+    consequence: read
+  - tool: beamer_create_feature_request
+    rest: POST /requests
+    consequence: write
+  - tool: beamer_update_feature_request
+    rest: PUT /requests/{featureRequestId}
+    consequence: write
+  - tool: beamer_delete_feature_request
+    rest: DELETE /requests/{featureRequestId}
+    consequence: destructive
+  - tool: beamer_vote_feature_request
+    rest: POST /requests/{featureRequestId}/votes
+    consequence: write
+  - tool: beamer_list_users
+    rest: GET /users
+    consequence: read
+  - tool: beamer_create_user
+    rest: POST /users
+    consequence: write
+  - tool: beamer_update_users
+    rest: PUT /users
+    consequence: write
+    note: Updates every user matching the query, not one addressed record.
+  - tool: beamer_delete_users
+    rest: DELETE /users
+    consequence: destructive
+    note: Deletes every user matching the query; an omitted filter is a broad delete with no undo.
+  - tool: beamer_list_nps
+    rest: GET /nps
+    consequence: read
+  - tool: beamer_check_nps
+    rest: GET /nps/check
+    consequence: read
+  - tool: beamer_send_nps_email
+    rest: POST /nps/email
+    consequence: write
+    note: Sends mail to a real end user; not reversible.
+  - tool: beamer_get_nps_link
+    rest: GET /nps/link
+    consequence: read
+  - tool: beamer_invite_team_member
+    rest: POST /team
+    consequence: write
+  - tool: beamer_update_team_member_role
+    rest: PUT /team
+    consequence: write
+  - tool: beamer_remove_team_member
+    rest: DELETE /team
+    consequence: destructive
+  - tool: beamer_delete_user_data
+    rest: DELETE /privacy
+    consequence: destructive
+    note: GDPR erasure. Highest-consequence call in the surface; no dry run, no confirmation step.
+candidate_tool_count: 33
+gaps:
+  - No input schemas are asserted here — Beamer publishes no OpenAPI, so parameters exist only as prose.
+  - The API key is account-scoped with no scopes, so any agent handed a key holds the destructive surface too.

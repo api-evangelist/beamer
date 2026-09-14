@@ -1,0 +1,57 @@
+generated: '2026-09-14'
+method: searched
+source: https://app.getbeamer.com/beamer/en
+url: https://app.getbeamer.com/beamer/en
+description: >-
+  Beamer publishes its own product changelog on Beamer — the standalone feed at
+  app.getbeamer.com/beamer/en, with a companion public roadmap and idea portal. It is a product
+  changelog, not an API changelog: no entry set describes API versions, endpoints or breaking changes,
+  and no separate API changelog exists.
+scheme: dated-entries-grouped-by-month
+current_version: null
+api_changelog: false
+subscribe:
+  email: true
+  push: true
+  note: The standalone feed offers "Subscribe to emails" and "Subscribe to push".
+categories:
+  - ai
+  - announcement
+  - beta
+  - blog
+  - changelog
+  - coming soon
+  - email notifications
+  - feedback
+  - ga
+  - help center
+  - improvement
+  - integrations
+  - new
+  - nps
+  - segmentation
+  - templates
+periods:
+  - '2026-01'
+  - '2025-10'
+  - '2025-09'
+  - '2025-07'
+  - '2025-06'
+  - '2025-05'
+  - '2025-04'
+  - '2025-03'
+  - '2024-12'
+  - '2024-09'
+  - '2024-06'
+  - '2023-06'
+latest_period: '2026-01'
+entries: []
+entries_note: >-
+  Entry bodies are rendered client-side by the Beamer widget, so the month archive (the list above,
+  read from the server-rendered month navigation) is the most that can be captured without executing
+  JavaScript. The months are recorded verbatim rather than inventing entry titles. Most recent
+  publication month observed: January 2026.
+related:
+  roadmap: https://app.getbeamer.com/beamer/roadmap/en
+  ideas: https://app.getbeamer.com/beamer/ideas/en
+  blog: https://www.getbeamer.com/blog

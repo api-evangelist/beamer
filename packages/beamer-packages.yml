@@ -1,0 +1,61 @@
+generated: '2026-09-14'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, api.wordpress.org/plugins/info/1.0/beamer.json,
+  https://help.userflow.com/beamer/docs/developer-documentation, https://getbeamer-api.pages.dev/
+description: >-
+  Beamer publishes no first-party client library for its REST API in any package registry. What it does
+  distribute first-party is the browser embed script (CDN, unpinned) and a WordPress plugin. Registries
+  searched with no first-party hit: npm, PyPI, RubyGems, Packagist, NuGet, Maven Central, crates.io,
+  pkg.go.dev. The github.com/getbeamer organization exists but publishes 0 public repositories.
+sdk_count: 0
+package_count: 2
+packages:
+  - name: beamer-embed.js
+    official: true
+    registry: cdn
+    kind: browser-embed
+    language: JavaScript
+    url: https://app.getbeamer.com/js/beamer-embed.js
+    docs: https://help.userflow.com/beamer/docs/developer-documentation
+    version: null
+    published: null
+    note: >-
+      Distributed from Beamer's own origin at a single unpinned URL — there is no version in the path
+      and no registry metadata endpoint to query, so a consumer cannot tell which build they load.
+      That is the finding, not a gap in this probe. It configures the widget through a global
+      beamer_config object (documented parameters: product_id, selector, display, filter, language,
+      lazy, alert, user_firstname/lastname/email/id) and exposes callbacks
+      (callback, onclick, onopen, onclose, onerror, onNpsShow, onNpsHide, onNpsScore, onNpsFeedback,
+      forceShowNPS, onInputFocus, onInputBlur). It wraps the widget, not the REST API.
+  - name: Beamer - newsfeed and push notifications (WordPress plugin)
+    official: true
+    registry: wordpress.org
+    kind: platform-plugin
+    language: PHP
+    url: https://wordpress.org/plugins/beamer/
+    version: '5.3'
+    published: '2023-09-20'
+    downloads: 30405
+    tested_up_to: '6.2.11'
+    author: Beamer (profiles.wordpress.org/joincube)
+    note: >-
+      First-party (author "Beamer", plugin homepage www.getbeamer.com). Last released 2023-09-20 and
+      declared compatible only up to WordPress 6.2 — roughly three years behind the current API surface.
+third_party:
+  - name: react-beamer
+    registry: npm
+    version: 1.1.0
+    published: '2021-05-27'
+    url: https://www.npmjs.com/package/react-beamer
+    official: false
+    note: >-
+      Community wrapper around the Beamer embed script ("Simple wrapper to simplify integration with
+      Beamer"). No repository declared, unreleased since 2021. Not published by Beamer.
+negative_results:
+  - registry: npm
+    queried: ['beamer', 'beamer-js', 'beamer-api', 'node-beamer', 'vue-beamer', '@getbeamer/beamer']
+    result: no first-party package; the npm name "beamer" belongs to an unrelated 2013 S3 sync CLI
+  - registry: pypi
+    queried: ['beamer', 'getbeamer', 'beamer-api']
+    result: no first-party package; "beamer" on PyPI is an unrelated monitor-positioning CLI

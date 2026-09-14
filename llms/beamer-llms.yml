@@ -1,0 +1,20 @@
+generated: '2026-09-14'
+method: searched
+source: https://help.userflow.com/llms.txt
+file: llms/beamer-llms.txt
+http_status: 200
+content_type: text/plain; charset=utf-8
+bytes: 62825
+title: Beamer - Userflow
+description: >-
+  Served verbatim from the docs host. Beamer's knowledge base moved to help.userflow.com/beamer after
+  Beamer and Userflow merged ("We're Beamer and Userflow, now united as one team", getbeamer.com/jobs),
+  and getbeamer.com/api links directly to help.userflow.com/beamer/docs/developer-documentation — so
+  this file, whose own title is "Beamer - Userflow", is the docs index for Beamer's documentation as
+  well as Userflow's. It is NOT served at getbeamer.com/llms.txt (404) or help.userflow.com/beamer/llms.txt (404).
+links_total: 388
+beamer_section_links: 214
+notes:
+  - The docs platform (Document360) also exposes a per-page markdown twin (".md" suffix on every link
+    in this file) plus "View as Markdown" / "Copy as Markdown for LLMs" controls on each article.
+  - No llms-full.txt was found on any host.

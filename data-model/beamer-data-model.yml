@@ -1,0 +1,140 @@
+generated: '2026-09-14'
+method: searched
+source: https://getbeamer-api.pages.dev/
+docs: https://getbeamer-api.pages.dev/
+description: >-
+  Entity graph for the Beamer REST API, read from the 20 schema definitions published in Beamer's API
+  reference and the paths that address them. No OpenAPI document is published, so this is read from the
+  reference's own object documentation rather than derived from a spec.
+identifier_style: >-
+  Integer (int64) surrogate ids on Post, Comment, Reaction, FeatureRequest and FeatureRequestVote;
+  string ids on NPS (Mongo-style ObjectId, e.g. 64e508e8961ebc4a71688027) and on User (beamerId).
+  Users additionally carry the customer's own userId from the embed script, which is the join key
+  between Beamer analytics and the host application.
+entity_count: 12
+entities:
+  - name: Post
+    description: A changelog entry. The root content object.
+    path: /posts
+    creation_schema: PostCreation
+    fields:
+      [id, date, dueDate, published, pinned, showInWidget, showInStandalone, category,
+       boostedAnnouncement, translations, filter, filterUrl, autoOpen, editionDate, feedbackEnabled,
+       reactionsEnabled, views, uniqueViews, clicks, feedbacks, positiveReactions, neutralReactions,
+       negativeReactions]
+    relationships:
+      - has_many: Translation
+        via: translations
+      - has_many: Comment
+        via: /posts/{postId}/comments
+      - has_many: Reaction
+        via: /posts/{postId}/reactions
+    note: >-
+      Engagement counters (views, uniqueViews, clicks, feedbacks, and the three reaction tallies) are
+      embedded on the Post itself — there is no separate analytics resource.
+  - name: Translation
+    description: Language-specific title/content/link body of a post. A post is a container of translations.
+    fields: [title, content, contentHtml, language, category, linkUrl, linkText, images]
+    relationships:
+      - belongs_to: Post
+  - name: Comment
+    description: End-user feedback on a post.
+    path: /posts/{postId}/comments
+    creation_schema: CommentCreation
+    fields: [id, date, text, postTitle, userId, userEmail, userFirstName, userLastName, url, userCustomAttributes]
+    relationships:
+      - belongs_to: Post
+        via: postId path parameter
+      - belongs_to: User
+        via: userId
+  - name: Reaction
+    description: Positive/neutral/negative reaction on a post.
+    path: /posts/{postId}/reactions
+    creation_schema: ReactionCreation
+    fields: [id, date, reaction, postTitle, userId, userEmail, userFirstName, userLastName, url, userCustomAttributes]
+    relationships:
+      - belongs_to: Post
+        via: postId path parameter
+      - belongs_to: User
+        via: userId
+  - name: FeatureRequest
+    description: An idea submitted to the feedback/ideas portal.
+    path: /requests
+    creation_schema: FeatureRequestCreation
+    fields:
+      [id, date, visible, category, status, translations, votesCount, commentsCount, notes, filters,
+       internalUserEmail, internalUserFirstname, internalUserLastname, userId]
+    relationships:
+      - has_many: FeatureRequestTranslation
+        via: translations
+      - has_many: FeatureRequestComment
+        via: /requests/{featureRequestId}/comments
+      - has_many: FeatureRequestVote
+        via: /requests/{featureRequestId}/votes
+      - belongs_to: User
+        via: userId (end-user submissions) or internalUserEmail (team-member submissions)
+    note: >-
+      Denormalised votesCount and commentsCount live on the request, mirroring the counter pattern on
+      Post.
+  - name: FeatureRequestTranslation
+    relationships:
+      - belongs_to: FeatureRequest
+  - name: FeatureRequestComment
+    path: /requests/{featureRequestId}/comments
+    creation_schema: FeatureRequestCommentCreation
+    relationships:
+      - belongs_to: FeatureRequest
+      - belongs_to: User
+        via: userId
+  - name: FeatureRequestVote
+    path: /requests/{featureRequestId}/votes
+    creation_schema: FeatureRequestVoteCreation
+    fields: [id, date, featureRequestTitle, userId, userEmail, userFirstName, userLastName, userCustomAttributes, url]
+    relationships:
+      - belongs_to: FeatureRequest
+      - belongs_to: User
+        via: userId
+  - name: User
+    description: An end user of the customer's application, observed through the embed script.
+    path: /users
+    creation_schema: UserCreation
+    fields:
+      [beamerId, userId, userEmail, userFirstName, userLastName, language, filter, firstSeen, lastSeen,
+       ip, browser, os, city, country, latitude, longitude]
+    relationships:
+      - has_many: Comment
+      - has_many: Reaction
+      - has_many: FeatureRequestVote
+      - has_many: NPS
+    note: >-
+      Carries device and geolocation telemetry (ip, browser, os, city, country, latitude, longitude)
+      plus arbitrary custom attributes. This is the personal-data centre of gravity of the API and the
+      object DELETE /privacy erases.
+  - name: NPS
+    description: A Net Promoter Score response.
+    path: /nps
+    fields: [id, date, score, feedback, userId, userEmail, userFirstName, userLastName, refUrl, url]
+    relationships:
+      - belongs_to: User
+        via: userId
+  - name: NpsEmailSurvey
+    description: Request body for sending an NPS survey by email (userEmail only).
+    path: /nps/email
+  - name: TeamMember
+    description: A member of the customer's Beamer account.
+    path: /team
+    fields: [email, role]
+    roles: [admin, manager, writer, designer, reader, billing]
+    deletion_schema: TeamMemberDeletion
+    relationships: []
+    note: >-
+      Roles exist on team members but are an account-level construct — they do not narrow what an API
+      key can do, because the key is account-scoped with no scopes.
+graph_notes:
+  - >-
+    Two parallel content trees (Post -> Comment/Reaction, FeatureRequest -> Comment/Vote) share the
+    same shape and the same User, but no schema is reused between them: Comment and
+    FeatureRequestComment are separate definitions with separate creation schemas.
+  - >-
+    Category is a bare string type, semicolon-delimited for multiples, with documented basic values
+    'new', 'improvement', 'fix', 'comingsoon', 'announcement' and 'other'. It is not an enum.

@@ -1,0 +1,70 @@
+generated: '2026-09-14'
+method: searched
+source: >-
+  https://getbeamer-api.pages.dev/, https://status.getbeamer.com/,
+  https://app.getbeamer.com/beamer/en, https://www.getbeamer.com/security
+description: >-
+  Versioning, deprecation and operational-commitment posture for the Beamer API and platform.
+versioning:
+  style: uri-path
+  current_version: v0
+  spec_version: 0.1.0
+  base_url: https://api.getbeamer.com/v0
+  policy_published: false
+  note: >-
+    Beamer's own developer documentation still describes the API as a beta ("We just launched a beta
+    version of our API and Zapier integration"), and the reference reports version 0.1.0 while serving
+    49 operations in production. No version-support or upgrade policy is published, and no second
+    version has appeared, so there is no evidence of how a v1 would be introduced.
+deprecation:
+  policy_published: false
+  sunset_header: not documented
+  deprecation_header: not documented
+  rfc8594: false
+  deprecated_elements:
+    - element: autoOpen
+      kind: field
+      schemas: [Post, PostCreation]
+      marker: '[Deprecated]'
+      replacement: not stated
+      sunset_date: not stated
+      source: https://getbeamer-api.pages.dev/
+  note: >-
+    The only deprecation signal anywhere in the surface is a "[Deprecated]" tag on the autoOpen field
+    (and its matching POST /posts parameter). No removal date, no replacement, no Deprecation/Sunset
+    response headers, and no deprecation policy page. No Deprecation pointer is emitted.
+status_page:
+  url: https://status.getbeamer.com/
+  http_status: 200
+  provider: third-party hosted status page
+  history: https://status.getbeamer.com/history
+  machine_readable_api: false
+  note: >-
+    Live and public. It is not a Statuspage.io deployment — /api/v2/status.json returns 404 — so there
+    is no machine-readable feed for an agent to poll.
+sla:
+  published_sla_document: false
+  uptime_claim: 'over 99.9%'
+  uptime_claim_source: https://www.getbeamer.com/security
+  support_tiers:
+    - plan: Free
+      support: Basic
+    - plan: Starter
+      support: Standard
+    - plan: Pro
+      support: Advanced
+    - plan: Scale
+      support: Priority
+    - plan: Custom/Enterprise
+      support: Enterprise
+  support_tiers_source: https://www.getbeamer.com/pricing
+changelog:
+  url: https://app.getbeamer.com/beamer/en
+  detail: see changelog/beamer-changelog.yml
+corporate:
+  note: >-
+    Beamer and Userflow now operate as one company ("We're Beamer and Userflow, now united as one
+    team", https://www.getbeamer.com/jobs). Beamer's knowledge base has already moved to
+    help.userflow.com/beamer and trust.getbeamer.com 301s to trust.userflow.com, so documentation and
+    trust surfaces are consolidating on the Userflow domain while the product, app and API remain on
+    getbeamer.com.

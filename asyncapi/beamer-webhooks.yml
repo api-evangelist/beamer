@@ -1,0 +1,55 @@
+generated: '2026-09-14'
+method: searched
+source: https://help.userflow.com/beamer/docs/developer-documentation
+docs: https://help.userflow.com/beamer/docs/developer-documentation
+description: >-
+  Beamer's event surface is a webhook catalog, not a streaming or AsyncAPI surface. Webhooks are
+  configured in the dashboard by picking an event type and an endpoint; Beamer then POSTs a JSON array
+  of one or more events to that endpoint. No AsyncAPI document is published on any host, and none is
+  authored here.
+asyncapi_published: false
+transport: https-webhook
+delivery:
+  method: POST
+  content_type: application/json
+  body_shape: JSON array containing at least one event
+  batching: >-
+    A single request can carry more than one event. Events delivered in one request are never resent in
+    a later one, so a receiver that processes only the first array element silently drops the rest.
+  retry_policy: not documented
+  ordering: not documented
+  replay: not supported — "Events sent in one request will not be sent in future requests"
+security:
+  mechanism: shared secret in header
+  header: Beamer-Webhook-Secret
+  signature: false
+  timestamp: false
+  note: >-
+    Each webhook carries an auto-generated secret, visible in the dashboard, that Beamer sends in the
+    Beamer-Webhook-Secret header on every request. Beamer recommends comparing it on every call. It is
+    a static bearer secret rather than an HMAC signature over the payload, so it offers no replay or
+    tamper protection beyond authenticity of the sender.
+event_count: 4
+events:
+  - name: New post
+    trigger: Publishing a new post
+    payload_fields:
+      [id, date, published, category, feedbackEnabled, reactionsEnabled, showInWidget,
+       showInStandalone, postUrl, language, title, contentHtml, content, linkUrl, linkText]
+  - name: New comment
+    trigger: A user sends a new comment
+    payload_fields:
+      [postTitle, date, text, userId, userFirstName, userLastName, userEmail, url, userCustomAttributes]
+  - name: New reaction
+    trigger: A user sends a new reaction
+    payload_fields:
+      [postTitle, date, reaction, userId, userFirstName, userLastName, userEmail, url, userCustomAttributes]
+  - name: New NPS score
+    trigger: A user saves a new NPS score
+    payload_fields:
+      [date, score, feedback, userId, userFirstName, userLastName, userEmail, url, refUrl, userCustomAttributes]
+gaps:
+  - No AsyncAPI or machine-readable event schema is published; payload shapes exist only as examples in prose.
+  - No delivery guarantees, retry schedule, or dead-letter behaviour is documented.
+  - No signature (HMAC) or timestamp, so a receiver cannot detect replay or tampering.
+  - No webhook management API — webhooks are created only in the dashboard, not through the REST API.

@@ -1,15 +1,34 @@
-generated: '2026-07-11'
+generated: '2026-09-14'
 method: searched
 probe: true
 source: https://www.getbeamer.com/security
-url: https://www.getbeamer.com/security
+url: https://trust.userflow.com/
+legacy_url: https://trust.getbeamer.com/
+redirect_note: >-
+  trust.getbeamer.com 301s to trust.userflow.com — a Vanta-hosted trust center titled "Userflow Trust
+  Center". Beamer and Userflow now operate as one company, and the trust surface has been consolidated
+  on the Userflow domain; Beamer's own footer and navigation still link to it as Beamer's Trust Center.
+trust_center_platform: Vanta
 certifications:
-- SOC 2
-- GDPR
+  - SOC 2
+  - GDPR
+security_practices:
+  source: https://www.getbeamer.com/security
+  encryption_in_transit: 'TLS, 2,048-bit keys or better'
+  encryption_at_rest: 'AES-256 with integrity'
+  backups: 'Customer data is always backed up'
+  uptime_claim: 'over 99.9%'
+  penetration_testing: 'Third party network, application and physical security tests conducted regularly'
+  gdpr: 'GDPR compliant, Data Processing Agreements in place'
+  data_ownership: 'Account and data belong to the customer and are not sold; deletion on request'
+related:
+  vulnerability_disclosure: security/beamer-vulnerability-disclosure.yml
+  privacy_endpoint: 'DELETE /privacy — the API surface for GDPR erasure'
 evidence:
-- source: https://www.getbeamer.com/security
-  keywords:
-  - soc 2
-  - soc2
-  - trust center
-  - gdpr
+  - source: https://www.getbeamer.com/security
+    http_status: 200
+  - source: https://www.getbeamer.com/bug-bounty-program
+    http_status: 200
+  - source: https://trust.getbeamer.com/
+    http_status: 301
+    redirects_to: https://trust.userflow.com/
