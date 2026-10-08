@@ -168,3 +168,55 @@ add_ons:
   - name: User Onboarding (by Userflow)
     availability: separate product, sold from userflow.com
     price: not published
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - negotiated
+  units:
+  - active-user
+  - request
+  plans:
+  - name: Free
+    access: freemium
+    model: free
+    model_how: derived
+    units:
+    - active-user
+    - request
+    periods:
+    - month
+  - name: Starter
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - active-user
+    - request
+    periods:
+    - month
+  - name: Pro
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - active-user
+    - request
+    periods:
+    - month
+  - name: Scale
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - active-user
+    - request
+    periods:
+    - month
+  - name: Custom
+    access: enterprise
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
