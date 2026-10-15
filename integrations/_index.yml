@@ -38,7 +38,7 @@
     app_slug: beamer
     beta: false
     builder: unknown (not in the directory record)
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: beamer-wordpress-own
   label: WordPress (own)
