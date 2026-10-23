@@ -25,23 +25,6 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
-- partner_name: WordPress (own)
-  partner: wordpress
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://wordpress.org/plugins/beamer/
-  mirror_of: wordpress/integrations/wordpress-integration-edges.yml
-  apps:
-  - Beamer – newsfeed and push notifications
-  listing_count: 1
-  detected: '2026-10-15'
-  detected_by: mirror-platform-listings.py
-  category: WordPress plugin
 - partner_name: Twilio Segment
   partner: segment
   partner_match: aggregator
@@ -101,6 +84,40 @@ edges:
     builder: unknown (community connector; contributor not in the record)
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: WordPress (own)
+  partner: wordpress
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://wordpress.org/plugins/beamer/
+  mirror_of: wordpress/integrations/wordpress-integration-edges.yml
+  apps:
+  - Beamer – newsfeed and push notifications
+  listing_count: 1
+  detected: '2026-10-15'
+  detected_by: mirror-platform-listings.py
+  category: WordPress plugin
+- partner_name: Intercom (own)
+  partner: intercom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.intercom.com/app-store/?app_package_code=beamer
+  mirror_of: intercom/integrations/intercom-integration-edges.yml
+  apps:
+  - Beamer
+  listing_count: 1
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Surveys & Feedback
 method: searched
 checked:
 - https://connectors.airbyte.com/files/registries/v0/cloud_registry.json
@@ -108,4 +125,5 @@ checked:
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/beamer
 - https://zapier.com/api/v4/apps/
 - wordpress/integrations/wordpress-integration-edges.yml
+- intercom/integrations/intercom-integration-edges.yml
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/beamer
