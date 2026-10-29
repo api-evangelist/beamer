@@ -1,4 +1,4 @@
-# Beamer (beamer)
+# Beamer
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,77 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Beamer is a changelog and notification center tool for announcing product updates, new features, and API changes to end users. It provides an embeddable feed widget, push notifications, email digests, and a public changelog page. The Beamer REST API enables programmatic management of posts, users, segments, and notification delivery. Beamer is now part of the Userflow product suite. The API uses API key authentication and supports OpenAPI specifications and Postman collections.
+Beamer is a changelog and notification center tool for announcing product updates, new features, and API changes to end users. It provides an embeddable feed widget, push notifications, email digests, and a public changelog page. The Beamer REST API enables programmatic management of posts, users, segments, and notification delivery. Beamer and Userflow now operate as one company, and Beamer's knowledge base has moved to help.userflow.com/beamer. The REST API is versioned at https://api.getbeamer.com/v0, documents 49 operations across posts, comments, reactions, feature requests, users, NPS, team and GDPR erasure, and authenticates with a single account-scoped API key sent in the Beamer-Api-Key header. Four webhook event types are published. No OpenAPI document, Postman collection or MCP server is served on any Beamer host.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/beamer/refs/heads/main/apis.yml)
+**Areas:** Changelog · Deprecation · Notification · Product Updates · User Engagement · Webhook · NPS · Feedback
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Beamer on APIs.io
 
-## Tags:
+Everything profiled for Beamer is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/beamer/](https://apis.io/providers/beamer/)** — or go straight to one of the APIs or properties below.
 
- - Changelog, Deprecation, Notifications, Product Updates, User Engagement
+### APIs (1)
 
-## Timestamps
+- [Beamer API](https://apis.io/apis/beamer/beamer/) — The Beamer REST API provides programmatic access to changelog posts, user management, segmentation, and notification feeds. Key endpoints include unread…
 
-- **Created:** 2026-03-29
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Beamer API
-The Beamer REST API provides programmatic access to changelog posts, user management, segmentation, and notification feeds. Key endpoints include unread count retrieval, post creation and management, user profile updates, and segment management. Authentication uses an API key from Beamer settings.
+#### AsyncAPI (1)
 
-**Human URL:** [https://www.getbeamer.com/api](https://www.getbeamer.com/api)
+Event-driven and webhook contracts.
 
-#### Tags:
+- [Beamer Webhooks](https://apis.io/asyncapis/beamer/beamer-webhooks/)
 
- - Changelog, Notifications, Product Updates
+#### MCP servers (1)
 
-#### Properties
+Model Context Protocol servers that expose the API to agents.
 
-- [Documentation](https://www.getbeamer.com/api)
-- [APIReference](https://www.getbeamer.com/api)
-- [Authentication](https://www.getbeamer.com/api)
+- [Candidate MCP tool surface derived from the published API reference (no server exists)](https://apis.io/servers/beamer/candidate-mcp-tool-surface-derived-from-the-published-api-reference-no-server-exists/)
 
-## Common Properties
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Beamer Authentication](https://apis.io/security/beamer/beamer-authentication/)
+- [Beamer Domain Security](https://apis.io/security/beamer/beamer-domain-security/)
+- [Beamer Trust Center](https://apis.io/security/beamer/beamer-trust-center/)
+- [Beamer Vulnerability Disclosure](https://apis.io/security/beamer/beamer-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Beamer Plans Pricing](https://apis.io/plans/beamer/beamer-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Beamer Rate Limits](https://apis.io/rate-limits/beamer/beamer-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Beamer Finops](https://apis.io/finops/beamer/beamer-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.getbeamer.com/)
 - [Documentation](https://www.getbeamer.com/api)
-- [GettingStarted](https://www.getbeamer.com/help/how-to-install-beamer-using-our-api)
-- [StatusPage](https://status.getbeamer.com)
+- [Getting started](https://help.userflow.com/beamer/docs/how-to-install-beamer-using-our-api)
+- [Pricing](https://www.getbeamer.com/pricing)
+- [Sign up](https://app.getbeamer.com/auth/signup)
+- [Support](https://www.getbeamer.com/contact)
+- [Blog](https://www.getbeamer.com/blog)
+- [Terms of service](https://www.getbeamer.com/terms-of-service)
+- [Privacy policy](https://www.getbeamer.com/privacy-policy)
+- [Status](https://status.getbeamer.com)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Changelog Feed Widget | Embeddable changelog widget that displays product updates to users within your application. |
-| Push Notifications | In-app push notifications to alert users about new features and product updates. |
-| Email Digests | Automated email digest delivery of changelog posts to user segments. |
-| User Segmentation | Target changelog announcements and notifications to specific user segments based on attributes. |
-| Unread Count API | REST API endpoint to retrieve unread notification count for individual users. |
-| Public Changelog | Hosted public changelog page for external users, prospects, and documentation. |
+**Kin Score 59.8** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 86.8 |
+| Developer ergonomics | 50.0 |
+| Access clarity | 92.1 |
 
-| Name | Description |
-|------|-------------|
-| Product Update Announcements | Announce new product features, improvements, and bug fixes to end users via in-app notifications. |
-| API Changelog | Maintain a dedicated API changelog for developers tracking breaking changes, deprecations, and new endpoints. |
-| User Onboarding | Surface new features to relevant users through targeted notifications and changelog posts. |
-| Release Notes Automation | Automate release note publishing from CI/CD pipelines using the Beamer API. |
+**Agent readiness 25.2** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
 
-| Name | Description |
-|------|-------------|
-| Zapier | Automation integration connecting Beamer with thousands of apps via Zapier workflows. |
-| Segment | Customer data platform integration for sending Beamer user events and changelog views to Segment. |
-| Intercom | Customer messaging platform integration enabling Beamer notifications alongside Intercom conversations. |
-| ActiveCampaign | Email marketing integration for delivering Beamer changelog digests through ActiveCampaign. |
-| WordPress | WordPress plugin for embedding Beamer changelog feed in WordPress websites. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/beamer/](https://apis.io/providers/beamer/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Beamer: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/beamer/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
