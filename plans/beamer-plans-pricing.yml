@@ -104,7 +104,7 @@ rate_limit_statements:
   100K API requests and $19 / additional 100K blocks after that.
 - Beamer limits media file uploads (including GIFs, images, and videos) to 10 MB for optimal performance.
 x-canonical:
-  generated: '2026-11-01'
+  generated: '2026-11-02'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - free
