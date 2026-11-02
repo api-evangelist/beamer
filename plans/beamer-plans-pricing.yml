@@ -1,0 +1,203 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://www.getbeamer.com/pricing
+sources:
+- https://www.getbeamer.com/pricing
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T141238
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: true
+note: Tiered SaaS pricing with monthly/annual toggle for Beamer Changelog plus Feedback and NPS add-ons;
+  API request limits and overage fees stated in FAQ. User Onboarding priced externally by Userflow.
+plan_count: 11
+currency: USD
+plans:
+- name: Free
+  price_text: $0
+  price: 0
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 1,000 Included MAUs, 1 teammate, 0 API limit, Beamer watermark
+- name: Starter
+  price_text: $59
+  price: 59
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 5,000 Monthly Active Users, 2,000 API requests/mo
+  overage: additional bundles at a rate of $50 /month per additional 5,000 MAUs
+- name: Starter (annual billing)
+  price_text: $49 / month
+  price: 49
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 5,000 Monthly Active Users
+- name: Pro
+  price_text: $119
+  price: 119
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 10,000 Monthly Active Users, 20,000 API requests/mo, 5,000 emails/mo
+  overage: $50 /month per additional 5,000 MAUs
+- name: Pro (annual billing)
+  price_text: $99
+  price: 99
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 10,000 Monthly Active Users
+- name: Scale
+  price_text: $299
+  price: 299
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 50,000 Monthly Active Users, 100,000 API requests/mo, 20,000 emails/mo
+  overage: $50 /month per additional 5,000 MAUs
+- name: Scale (annual billing)
+  price_text: $249
+  price: 249
+  currency: USD
+  period: month
+  unit: account
+  included_quota: 50,000 Monthly Active Users
+- name: Custom
+  price_text: Get in touch
+  period: none
+  included_quota: Custom MAUs, custom API limit, custom emails
+- name: Feedback Add-on
+  price_text: $99 / month
+  price: 99
+  currency: USD
+  period: month
+  unit: add-on
+  included_quota: In-app feedback collection, public/private roadmap
+- name: NPS Add-on
+  price_text: $99 / month
+  price: 99
+  currency: USD
+  period: month
+  unit: add-on
+  included_quota: Up to 2000 monthly surveys, unlimited NPS history
+- name: NPS Free
+  price_text: $0
+  price: 0
+  currency: USD
+  period: month
+  unit: add-on
+  included_quota: Up to 500 monthly surveys, last 90 days NPS history
+rate_limit_statements:
+- API limit Limit on the number of API requests made per month 0 2,000 20,000 100,000 Custom
+- Yes - there is a monthly limit of 2,000 API requests in Starter, 20,000 in Pro and 100,000 in Scale.
+  If this limit is exceeded additional API requests will be charged at $49 for the first extra block of
+  100K API requests and $19 / additional 100K blocks after that.
+- Beamer limits media file uploads (including GIFs, images, and videos) to 10 MB for optimal performance.
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - free
+  - hybrid
+  - metered
+  - subscription
+  units:
+  - object
+  plans:
+  - name: Free
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Starter
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Starter (annual billing)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Pro
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Pro (annual billing)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Scale
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Scale (annual billing)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Custom
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
+  - name: Feedback Add-on
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: NPS Add-on
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: NPS Free
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
